@@ -1,0 +1,155 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.sportsimg {
+    height: 500px;
+    width: 100%;
+    // flex: none;
+    padding: 0;
+    margin: 0;
+}
+
+.removepadding {
+    // flex: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.sportstab-heading {
+    text-align: center;
+}
+
+.sportstab-heading {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.sportstab {
+    padding: 10px;
+}
+
+.sportstab-img1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.bettingrow1 {
+    text-align: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sportsimg-1 {
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.seeall {
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: right;
+}
+
+.bettingtab-img1 {
+    height: 65px;
+    width: 200px;
+    border-radius: 5px;
+}
+
+.bettingimage1 {
+    padding: 15px 0px
+}
+
+.seall-betting {
+    display: block;
+    text-align: right;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 10px;
+    margin-top: 10px;
+}
+
+.promos {
+    display: block;
+    text-align: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    // margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.promo-img {
+    width: 300px;
+    height: 150px;
+    border-radius: 5px;
+}
+
+.card {
+    margin-top: 10px;
+    border-radius: 5px;
+    margin-top: 5px solid #635e5e;
+    // box-shadow: 0px 2px 10px #635e5e inset;
+    box-shadow: 0px 0px 2px 2px grey inset;
+    border-bottom: none;
+    display: inline-block;
+    padding: 20px;
+    background-color: #dfdada;
+}
+
+.visintext {
+    padding-right: 30px;
+    text-align: right;
+    vertical-align: middle;
+    margin: auto 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.textdata {
+    text-align: left;
+    text-align: justify;
+    padding-bottom: 40px;
+}
+
+.line {
+
+    // position: absolute;
+    // left: 50%;
+    // margin-left: -3px;
+    padding-left: 80px;
+
+    .line2 {
+        border-left: 6px solid #DFB6BA;
+        padding: 20px 0px;
+        height: 230px;
+        transform: (-50px);
+    }
+}
+
+.benifit {
+    margin: auto 0;
+    vertical-align: middle;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.benifittext {
+    padding-top: 30px;
+}
+
+.checkboxdiv {
+    font-weight: normal;
+    font-size: 20px;
+}
