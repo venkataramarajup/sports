@@ -1,13 +1,13 @@
 <mat-card class="example-card">
 	<mat-card-header>
-		<mat-card-title>Make a Deposit</mat-card-title>
+		<mat-card-title>{{this.inputdata.title}}</mat-card-title>
 		<!-- <mat-card-subtitle>
 			Online Deposit Methods
 		</mat-card-subtitle> -->
 	</mat-card-header>
 	<mat-card-content>
 		<div class="card-sub-title">
-			Online Deposit Methods
+			{{this.inputdata.SubTitle}}
 		</div>
 		<div class="col-12 card-buttons">
 			<div class="row cashbtncss">
@@ -31,7 +31,7 @@
 			------------------------------ or ------------------------------
 		</div>
 		<div class="col-12 nononlinedeposit">
-			<button class="nononlinedepositbtn">Make a Non Online Deposit</button>
+			<button class="nononlinedepositbtn">{{this.inputdata.button1}}</button>
 		</div>
 		<div class="col-12 onlinemethods">
 			<div class="row paymentgateway">

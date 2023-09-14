@@ -11,8 +11,8 @@ import { MakeANonOnlineDepositFormComponent } from '../Dialog-boxes/make-a-non-o
 })
 export class NavComponent implements OnInit {
 
-  formDialogRef: MatDialogRef<MakeADepositComponent>;
-  payformDialogRef: MatDialogRef<MakeADepositFormComponent>;
+  // formDialogRef: MatDialogRef<MakeADepositComponent>;
+  // payformDialogRef: MatDialogRef<MakeADepositFormComponent>;
 
   constructor(private dialog: MatDialog) { }
 
@@ -20,13 +20,26 @@ export class NavComponent implements OnInit {
     // this.openform()
   }
 
-  opendialog() {
-    const dialogRef = this.dialog.open(MakeADepositComponent, {
-      data: {
-        title: 'Make a Online Deposit',
-        SubTitle: 'Online Deposit Methods'
-      }
-    })
+  openMakeADepositdialog(type: any) {
+    let dialogRef
+    if (type === 'Deposit') {
+      dialogRef = this.dialog.open(MakeADepositComponent, {
+        data: {
+          title: 'Make a Deposit',
+          SubTitle: 'Online Deposit Methods',
+          button1: 'Make a Non Online Deposit'
+        }
+      })
+    } else {
+      dialogRef = this.dialog.open(MakeADepositComponent, {
+        data: {
+          title: 'Request a Pay Out',
+          SubTitle: 'Online Pay Out Methods',
+          button1: 'Request a Non Online Pay Out'
+        }
+      })
+    }
+
     dialogRef.afterClosed().subscribe(data => {
       if (data) {
         console.log(data)

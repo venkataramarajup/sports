@@ -8,10 +8,12 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./make-a-deposit.component.scss']
 })
 export class MakeADepositComponent implements OnInit {
+  inputdata: any;
 
   constructor(@Inject(MAT_DIALOG_DATA) private data: any, private dialogRef: MatDialogRef<MakeADepositComponent>) {
-    if (data) {
-      console.log(data)
+    if (this.data) {
+      console.log(this.data)
+      this.inputdata = this.data
     }
   }
 
