@@ -7,14 +7,15 @@
         margin:0;
         li{
             display: inline-block;
-            margin: 0 18px;
+            margin: 0 25px;
             a{
                 text-decoration: none;
                 text-align: center;
                 color: #4D4E4E;
                 text-transform: uppercase;
-                font-weight: 500;
                 position: relative;
+                font-size: 12px;
+                font-weight: 700;
                 .icon{
                     width: 28px;
                     height: 28px;
