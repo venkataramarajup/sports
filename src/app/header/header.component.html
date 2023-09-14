@@ -1,7 +1,7 @@
 <div class="h-left-sec">
-   <div class="logo">
-    <img src="./../../assets/images/logo.png" alt="allsports247">
-   </div>
+    <div class="logo" (click)="redirectToHome()">
+        <img src="./../../assets/images/logo.png" alt="allsports247">
+    </div>
 </div>
 <div class="h-right-sec ms-auto">
     <div class="contact">
@@ -9,8 +9,10 @@
         <a href="mailto:info@all.sports247.eu" class="mail">info@all.sports247.eu</a>
     </div>
     <div class="btns">
-        <button class="btn btn-light login"><img src="../../assets/images/icons/login.svg" alt=""><span class="text"> Login</span></button>
-        <button class="btn btn-light ms-2 signup"><img src="../../assets/images/icons/add-user.svg" alt=""> <span class="text">Sign Up</span></button>
-        <button class="btn btn-light ms-2 help">Help Center</button>
+        <button class="btn btn-light login"><img src="../../assets/images/icons/login.svg" alt=""><span class="text">
+                Login</span></button>
+        <button class="btn btn-light ms-2 signup"><img src="../../assets/images/icons/add-user.svg" alt=""> <span
+                class="text">Sign Up</span></button>
+        <button class="btn btn-light ms-2 help" (click)="redirectToHelpCenter()">Help Center</button>
     </div>
 </div>
