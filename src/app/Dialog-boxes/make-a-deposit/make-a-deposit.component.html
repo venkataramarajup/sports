@@ -1,9 +1,46 @@
-<!-- <mat-dialog-content>
-	<p>
-		{{message}}
-	</p>
-</mat-dialog-content>
-<mat-dialog-actions align="center">
-	<button mat-raised-button color="primary" (click)="onConfirmClick()" tabindex="1">{{confirmButtonText}}</button>
-	<button mat-raised-button mat-dialog-close tabindex="-1">{{cancelButtonText}}</button>
-</mat-dialog-actions> -->
+<mat-card class="example-card">
+	<mat-card-header>
+		<mat-card-title>Make a Deposit</mat-card-title>
+		<!-- <mat-card-subtitle>
+			Online Deposit Methods
+		</mat-card-subtitle> -->
+	</mat-card-header>
+	<mat-card-content>
+		<div class="card-sub-title">
+			Online Deposit Methods
+		</div>
+		<div class="col-12 card-buttons">
+			<div class="row cashbtncss">
+				<div class="col-lg-6 col-md-12 col-xs-12 cashmode">
+					<button class="cashbtn">Cash App</button>
+				</div>
+				<div class="col-lg-6 col-md-12 col-xs-12 cashmode">
+					<button class="cashbtn">PayPal</button>
+				</div>
+			</div>
+			<div class="row cashbtncss">
+				<div class="col-lg-6 col-md-12 col-xs-12 cashmode">
+					<button class="cashbtn">Zelle</button>
+				</div>
+				<div class="col-lg-6 col-md-12 col-xs-12 cashmode">
+					<button class="cashbtn">venmo</button>
+				</div>
+			</div>
+		</div>
+		<div class="col-12 line">
+			------------------------------ or ------------------------------
+		</div>
+		<div class="col-12 nononlinedeposit">
+			<button class="nononlinedepositbtn">Make a Non Online Deposit</button>
+		</div>
+		<div class="col-12 onlinemethods">
+			<div class="row paymentgateway">
+				FedEx &nbsp;&nbsp;&nbsp;&nbsp; Westernunion \\WU
+			</div>
+			<div class="row paymentgateway">
+				Crypto Currency Visa
+			</div>
+		</div>
+
+	</mat-card-content>
+</mat-card>

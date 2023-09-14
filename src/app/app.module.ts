@@ -12,6 +12,11 @@ import { MakeADepositFormComponent } from './Dialog-boxes/make-a-deposit-form/ma
 import { MakeADepositComponent } from './Dialog-boxes/make-a-deposit/make-a-deposit.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+// import { MatDialogModule } from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import { MatCardModule } from '@angular/material/card';
+import { MaterialModule } from './material.module';
+import { MakeANonOnlineDepositFormComponent } from './Dialog-boxes/make-a-non-online-deposit-form/make-a-non-online-deposit-form.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +27,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NavComponent,
     MakeADepositComponent,
     MakeADepositFormComponent,
+    MakeANonOnlineDepositFormComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    // MatDialogModule,
+    // MatCardModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-// import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 // import { VERSION, MatDialogRef, MatDialog, MatSnackBar, MAT_DIALOG_DATA } from '@angular/material';
 
 @Component({
@@ -8,17 +8,11 @@ import { Component, Inject, OnInit } from '@angular/core';
   styleUrls: ['./make-a-deposit.component.scss']
 })
 export class MakeADepositComponent implements OnInit {
-  // @Inject(MAT_DIALOG_DATA) private data: any,
-  // private dialogRef: MatDialogRef<MakeADepositComponent>
 
-  constructor() {
-    // if (data) {
-    //   // this.message = data.message || this.message;
-    //   // if (data.buttonText) {
-    //   //   this.confirmButtonText = data.buttonText.ok || this.confirmButtonText;
-    //   //   this.cancelButtonText = data.buttonText.cancel || this.cancelButtonText;
-    //   // }
-    // }
+  constructor(@Inject(MAT_DIALOG_DATA) private data: any, private dialogRef: MatDialogRef<MakeADepositComponent>) {
+    if (data) {
+      console.log(data)
+    }
   }
 
   ngOnInit(): void {
@@ -26,7 +20,7 @@ export class MakeADepositComponent implements OnInit {
   }
 
   onConfirmClick(): void {
-    // this.dialogRef.close(true);
+    this.dialogRef.close(true);
   }
 
 }
