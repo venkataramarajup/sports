@@ -1,4 +1,4 @@
-<ul class="main-nav">
+<!-- <ul class="main-nav">
     <li>
         <a routerLink="/Sports"><span class="icon"> <img src="../../assets/images/sports-icon.svg"
                     alt=""></span>Sports</a>
@@ -34,19 +34,53 @@
     <li>
         <a routerLink="/AboutUs">About Us</a>
     </li>
-</ul>
-<div class="ms-auto">
-    <div class="dropdown">
-        <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Banking
-        </button>
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+</ul> -->
+<nav class="navbar p-3 navbar-expand-lg bg-body-tertiary">
+
+      <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav main-nav">
+          <li class="nav-item">         
+            <a routerLink="/Sports"><span class="icon nav-link active" aria-current="page"> <img src="../../assets/images/sports-icon.svg"
+                alt=""></span>Sports</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/Casino"><span class="icon nav-link"> <img src="../../assets/images/casino-icon.svg"
+                alt=""></span>Casino</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/LiveBetting"><span class="icon nav-link"> <img src="../../assets/images/betting-icon.svg"
+                alt=""></span>Live Betting</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/HorseRacing"><span class="icon nav-link"> <img src="../../assets/images/racing-icon.svg"
+                alt=""></span>Horse Racing</a>
+          </li>
+          <li>
+            <a routerLink="/ReferAFriend"><span class="icon nav-link"> <img src="../../assets/images/refer-icon.svg" alt=""></span> A
+                Friend</a>
+          </li>
+      
         </ul>
-    </div>
-</div>
+      </div>
+  
+
+        <div class="dropdown ms-auto my-auto banking-dropdown">
+            <button class="btn btn-light dropdown-toggle px-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Banking
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </div>
+    
+  </nav>
+
 <!-- this will be removed later from nav section -->
 <!-- this is kept here to build the pages -->
 <!-- <div (click)="opendialog()">open dialog</div> -->

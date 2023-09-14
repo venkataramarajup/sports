@@ -2,6 +2,7 @@
     background:#3F3F3F;
     padding: 15px 50px;
     display: flex;
+    flex: 0 0 100%;
     .h-left-sec{
         display: flex;
         align-items: center;
@@ -32,8 +33,58 @@
                 padding: 7px 15px;
                 border-radius: 40px;
                 width: 130px;
+                img{
+                    display: none;
+                }
             }
         }
     }
     
+}
+
+
+@media only screen and (max-width: 600px) {
+  :host{
+    padding: 15px;
+    .h-left-sec{
+
+        .logo{
+            img{
+                height: 28px;
+            }
+        }
+    }
+    .h-right-sec{
+        .contact{
+            display: none;
+        }
+        .btns{        
+          .btn{
+            width: auto;
+            padding: 5px 10px;
+            img{
+                width: 20px !important;
+                display: inline-block;
+            }
+            &.login{
+               
+            }
+            &.signup{
+                width: 36px;
+                height: 36px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+             
+                .text{
+                    display: none;
+                }
+            }
+            &.help{
+                display: none;
+            }
+          }
+        }
+    }
+  }
 }

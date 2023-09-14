@@ -1,155 +1,301 @@
-* {
-    padding: 0;
-    margin: 0;
-}
+// * {
+//     padding: 0;
+//     margin: 0;
+// }
 
-.sportsimg {
-    height: 500px;
-    width: 100%;
-    // flex: none;
-    padding: 0;
-    margin: 0;
-}
+.home-banner {
+    position: relative;
+    overflow: hidden;
+    &:after{
+        content: '';
+        background-image: url("../../../assets/images/banners/banner-curve.svg");
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+        height: 90px;
+        background-repeat: no-repeat;
+        pointer-events: none;
+       }
+    .carousel-inner{
+        .carousel-caption {
+            padding: 40px 60px;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            display: flex !important;
+            flex-direction: column;
+            text-align: left;
+            justify-content: center;
+            max-width: 60%;
+            h5{
+                font-size: 50px;
+                font-weight: 800;
+                text-transform: uppercase;
+            }
+            p{
 
-.removepadding {
-    // flex: 0;
-    padding: 0;
-    margin: 0;
-}
-
-.sportstab-heading {
-    text-align: center;
-}
-
-.sportstab-heading {
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.sportstab {
-    padding: 10px;
-}
-
-.sportstab-img1 {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    height: 40px;
-    border-radius: 5px;
-}
-
-.bettingrow1 {
-    text-align: center;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.sportsimg-1 {
-    margin: 0 auto;
-    padding: 10px;
-}
-
-.seeall {
-    margin-top: 10px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    text-align: right;
-}
-
-.bettingtab-img1 {
-    height: 65px;
-    width: 200px;
-    border-radius: 5px;
-}
-
-.bettingimage1 {
-    padding: 15px 0px
-}
-
-.seall-betting {
-    display: block;
-    text-align: right;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-right: 10px;
-    margin-top: 10px;
-}
-
-.promos {
-    display: block;
-    text-align: center;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    // margin-bottom: 20px;
-    margin-top: 20px;
-}
-
-.promo-img {
-    width: 300px;
-    height: 150px;
-    border-radius: 5px;
-}
-
-.card {
-    margin-top: 10px;
-    border-radius: 5px;
-    margin-top: 5px solid #635e5e;
-    // box-shadow: 0px 2px 10px #635e5e inset;
-    box-shadow: 0px 0px 2px 2px grey inset;
-    border-bottom: none;
-    display: inline-block;
-    padding: 20px;
-    background-color: #dfdada;
-}
-
-.visintext {
-    padding-right: 30px;
-    text-align: right;
-    vertical-align: middle;
-    margin: auto 0;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.textdata {
-    text-align: left;
-    text-align: justify;
-    padding-bottom: 40px;
-}
-
-.line {
-
-    // position: absolute;
-    // left: 50%;
-    // margin-left: -3px;
-    padding-left: 80px;
-
-    .line2 {
-        border-left: 6px solid #DFB6BA;
-        padding: 20px 0px;
-        height: 230px;
-        transform: (-50px);
+            }
+        }
+    }
+    .carousel-indicators{
+        bottom: 50px;
+        [data-bs-target]{
+            width: 10px !important;
+            height: 10px !important;
+            border-radius: 50%;
+            background-color: transparent;
+            border: 2px solid #fff;
+            &.active{
+                background-color: #fff;
+            }
+        }
     }
 }
+// .carousel.fade {
+//     opacity: 1;
+// }
+// .carousel.fade .item {
+//    transition: opacity ease-out .7s;
+//    left: 0;
+//    opacity: 0; /* hide all slides */
+//    top: 0;
+//    position: absolute;
+//    width: 100%;
+//    display: block;
+// }
+// .carousel.fade .item:first-child {
+//    top: auto;
+//    opacity: 1; /* show first slide */
+//    position: relative;
+// }
+// .carousel.fade .item.active {
+//    opacity: 1;
+// }
 
-.benifit {
-    margin: auto 0;
-    vertical-align: middle;
-    font-size: 24px;
-    font-weight: bold;
+.promos{
+    .tiles1 {
+        text-align: center;
+        .tile {
+            display: inline-block;
+            margin: 10px;
+            text-align: left;
+            opacity: 0.99;
+            overflow: hidden;
+            position: relative;
+            border-radius: 3px;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);      
+            width: 100%;//by san
+            height: 109px;
+            &:before {
+                content: "";
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+                width: 100%;
+                height: 100%;
+                opacity: 1;
+                // position: absolute;
+                // top: 100%;
+                // left: 0;
+                z-index: 2;
+                // transition-property: top, opacity;
+                // transition-duration: 0.3s;
+            }
+            img {
+                display: block;
+                width: 100%;
+                max-width: 100%;
+                backface-visibility: hidden;
+                -webkit-backface-visibility: hidden;
+                // position: absolute;//by san
+                // left: 0;//by san
+                // top: 0;//by san
+            }
+            .details {
+                font-size: 16px;
+                padding: 20px;
+                color: #fff;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                z-index: 3;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                top: 0;
+                align-items: center;
+                .title {
+                    line-height: 1;
+                    font-weight: 600;
+                    font-size: 18px;
+                    text-transform: uppercase;
+                }
+                .btn{
+                    background-color: #ff0000;
+                    color: #fff;
+                    border-radius: 20px;
+                    padding: 5px 15px;
+                }
+            }
+    
+        
+        }
+    }
+    .see-all{
+        color: #333;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        margin-left: auto;
+        width: auto;
+    }
+    .tiles2 {
+        // width: 1040px;
+        // font-size: 0;
+        // text-align: center;
+        // position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+        .tile {
+            display: inline-block;
+            margin: 10px;
+            text-align: left;
+            opacity: 0.99;
+            overflow: hidden;
+            position: relative;
+            border-radius: 3px;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
+            padding-top: 100%; //by san
+            width: 100%;//by san
+            &:before {
+                content: "";
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+                width: 100%;
+                height: 50%;
+                opacity: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                z-index: 2;
+                transition-property: top, opacity;
+                transition-duration: 0.3s;
+            }
+            img {
+                display: block;
+                max-width: 100%;
+                backface-visibility: hidden;
+                -webkit-backface-visibility: hidden;
+                position: absolute;//by san
+                left: 0;//by san
+                top: 0;//by san
+            }
+            .details {
+                font-size: 16px;
+                padding: 20px;
+                color:#fff;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                z-index: 3;
+                span {
+                    display: block;
+                    opacity: 0;
+                    position: relative;
+                    top: 100px;
+                    transition-property: top, opacity;
+                    transition-duration: 0.3s;
+                    transition-delay: 0s;
+                }
+                .title {
+                    line-height: 1;
+                    font-weight: 600;
+                    font-size: 18px;
+                }
+                .info {
+                    line-height: 1.2;
+                    margin-top: 5px;
+                    font-size: 12px;
+                }
+            }
+            &:focus {
+                &:before {
+                    opacity: 1;
+                    top: 50%;
+                }
+                span {
+                    opacity: 1;
+                    top: 0;
+                }
+                .title {
+                    transition-delay: 0.15s;
+                }
+                .info {
+                    transition-delay: 0.25s;
+                }
+            }
+            &:hover {
+                &:before {
+                    opacity: 1;
+                    top: 50%;
+                }
+                span {
+                    opacity: 1 !important;
+                    top: 0 !important;
+                }
+                .title {
+                    transition-delay: 0.15s;
+                }
+                .info {
+                    transition-delay: 0.25s;
+                }
+                // .details{
+                //     span{
+                //         opacity: 1;
+                //     }
+                // }
+            }
+        }
+    }
+    
 }
 
-.benifittext {
-    padding-top: 30px;
-}
 
-.checkboxdiv {
-    font-weight: normal;
-    font-size: 20px;
+.footer2{
+    background-color: #f0f0f0;
+    border-radius: 30px 30px 0 0;
+    padding: 30px;
+    box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
+    
+    
+}
+footer{
+    background-color: #262626;
+    border-radius: 30px 30px 0 0;
+    padding: 30px;
+    .socialList {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: flex-start;
+        li {
+          padding-left: 10px;
+          a {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+            text-decoration: none;
+            // background-color: #999;
+            color: #fff;
+       
+          }
+     
+        }
+      }
 }
