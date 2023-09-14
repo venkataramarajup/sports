@@ -1,20 +1,21 @@
 :host{
-    display: flex;
-    padding: 15px;
+    flex-wrap: wrap;
+    padding: 0;
     .main-nav{
         
         padding: 0;
         margin:0;
         li{
             display: inline-block;
-            margin: 0 18px;
+            margin: 0 25px;
             a{
                 text-decoration: none;
                 text-align: center;
                 color: #4D4E4E;
                 text-transform: uppercase;
-                font-weight: 500;
                 position: relative;
+                font-size: 12px;
+                font-weight: 700;
                 .icon{
                     width: 28px;
                     height: 28px;
@@ -53,4 +54,27 @@
             }
         }
     }
+    .banking-dropdown{
+        .btn.dropdown-toggle{
+            border-radius: 30px;
+            box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+            background: #fff;         
+        }
+    }
+    @media only screen and (max-width: 600px) {
+        nav{
+            flex-direction: row-reverse;
+            .navbar-toggler {
+                border: 0;
+                &:focus{
+                    border: 0;
+                    box-shadow: none;
+                }
+            }
+        }
+        .banking-dropdown{
+            margin-left: 0 !important;
+        } 
+    }
+  
 }

@@ -1,0 +1,56 @@
+:host{
+    footer{
+        background-color: #262626;
+        padding: 35px;
+        .socialList {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-start;
+            li {
+              padding-left: 10px;
+              a {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 30px;
+                height: 30px;
+                border-radius: 100%;
+                text-decoration: none;
+                // background-color: #999;
+                color: #fff;
+           
+              }
+         
+            }
+          }
+    }
+    h3{
+        text-transform: uppercase;
+        color:#fff;
+        font-size: 16px;
+    }
+    a{
+        color:#fff;
+        text-decoration: none;
+        display: block;
+        font-size: 12px;
+    }
+    p{
+        color:#eaeaea;
+    }
+    .social-media {
+        ul{
+            li{
+                a{
+                    i{
+                        font-size: 30px;
+                        color:#fff;
+                    }
+                }
+            }
+        }
+    }
+}
