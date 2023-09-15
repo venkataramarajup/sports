@@ -5,8 +5,32 @@ body{
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
 }
-
-
+.uppercase{
+  text-transform: uppercase;
+}
+.m-width-100{
+  min-width: 100px;
+}
+.m-width-150{
+  min-width: 150px;
+}
+.m-width-200{
+  min-width: 200px;
+}
+.border-left{
+  border-left: 1px solid #AB0A1A;
+}
+.theme-btn{
+  background-color: #ff0000;
+  border-color: #ff0000;
+  color: #fff;
+  border-radius: 20px;
+  padding: 5px 15px;
+  &:hover{
+    background-color: #e00707;
+    color: #fff;
+  }
+}
 @media only screen and (max-width: 600px) {
   
   }

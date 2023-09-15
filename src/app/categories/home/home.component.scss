@@ -6,18 +6,20 @@
 .home-banner {
     position: relative;
     overflow: hidden;
-    &:after{
-        content: '';
-        background-image: url("../../../assets/images/banners/banner-curve.svg");
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 9999;
-        height: 90px;
-        background-repeat: no-repeat;
-        pointer-events: none;
-       }
+    // &:after{
+    //     content: '';
+    //     background-image: url("../../../assets/images/banners/banner-curve.svg");
+    //     position: absolute;
+    //     bottom: 0;
+    //     left: 0;
+    //     right: 0;
+    //     z-index: 9999;
+    //     height: 200px;
+    //     background-repeat: no-repeat;
+    //     pointer-events: none;
+    //     background-position: bottom;
+    //     background-size: 100% auto;
+    //    }
     .carousel-inner{
         .carousel-caption {
             padding: 40px 60px;
@@ -54,27 +56,15 @@
         }
     }
 }
-// .carousel.fade {
-//     opacity: 1;
-// }
-// .carousel.fade .item {
-//    transition: opacity ease-out .7s;
-//    left: 0;
-//    opacity: 0; /* hide all slides */
-//    top: 0;
-//    position: absolute;
-//    width: 100%;
-//    display: block;
-// }
-// .carousel.fade .item:first-child {
-//    top: auto;
-//    opacity: 1; /* show first slide */
-//    position: relative;
-// }
-// .carousel.fade .item.active {
-//    opacity: 1;
-// }
-
+.curve{
+    width: 100%;
+    position: relative;
+    margin-top: -65px;
+    z-index: 9;
+    img{
+        width: 100%;
+    }
+}
 .promos{
     .tiles1 {
         text-align: center;
@@ -131,12 +121,7 @@
                     font-size: 18px;
                     text-transform: uppercase;
                 }
-                .btn{
-                    background-color: #ff0000;
-                    color: #fff;
-                    border-radius: 20px;
-                    padding: 5px 15px;
-                }
+               
             }
     
         
@@ -267,35 +252,11 @@
     border-radius: 30px 30px 0 0;
     padding: 30px;
     box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
-    
-    
-}
-footer{
-    background-color: #262626;
-    border-radius: 30px 30px 0 0;
-    padding: 30px;
-    .socialList {
-        list-style: none;
+    h2{
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    p{
         margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: flex-start;
-        li {
-          padding-left: 10px;
-          a {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 30px;
-            height: 30px;
-            border-radius: 100%;
-            text-decoration: none;
-            // background-color: #999;
-            color: #fff;
-       
-          }
-     
-        }
-      }
+    }
 }

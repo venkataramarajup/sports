@@ -1,0 +1,209 @@
+
+.home-banner {
+    position: relative;
+    overflow: hidden;
+    .carousel-inner{
+        .carousel-caption {
+            padding: 40px 60px;
+            // left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            display: flex !important;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            max-width: 100%;
+            h5{
+                font-size: 50px;
+                font-weight: 800;
+                text-transform: uppercase;
+                span{
+                    color: #E50019;
+                }
+            }
+            .btn{
+                background-color: #ff0000;
+                border-color: #ff0000;
+                color: #fff;
+                border-radius: 20px;
+                padding: 8px 30px;
+                margin: 30px auto 15px;
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+            a{
+              color:#fff;
+              text-decoration: none;
+              &:hover{
+                text-decoration: underline;
+              }
+            }
+        }
+    }
+    .carousel-indicators{
+        bottom: 50px;
+        [data-bs-target]{
+            width: 10px !important;
+            height: 10px !important;
+            border-radius: 50%;
+            background-color: transparent;
+            border: 2px solid #fff;
+            &.active{
+                background-color: #fff;
+            }
+        }
+    }
+}
+.curve{
+    width: 100%;
+    position: relative;
+    margin-top: -65px;
+    z-index: 9;
+    img{
+        width: 100%;
+    }
+}
+
+.steps-sec{
+    position: relative;
+    &:before{
+        height: calc(100% - 60px);
+        content: "";
+        width: 100%;
+        background: #eaeaea;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        z-index: -1;
+        background-image: url("../../../assets/images/refer-arrow.svg");
+        background-position: center;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+    }
+    .step-by-step{
+        display: flex;
+        justify-content: space-around;
+        .circle{
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #F4F3EF;
+            box-shadow: 8px 2px 10px rgba(0,0,0,.2), inset 0px 0px 6px rgba(0,0,0,0.2);
+            position: relative;
+            img{
+                height: 60px;
+            }
+            &:before{
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                border-radius: 50%;
+                width: 74%;
+                z-index: 99;
+                margin: auto;
+                height: 74%;
+                box-shadow: inset 0px 0px 6px rgba(0,0,0,0.2);
+            }
+        }
+    }
+}
+.steps-text-sec{
+    position: relative;
+ .steps-text{
+    display: flex;
+    justify-content: space-around;
+    .text{
+        text-align: center;
+        p{
+            strong{
+                display: block;
+                text-transform: uppercase;
+                font-size: 25px;
+                color: #6A6965;
+                margin-bottom: 15px;
+            }
+        }
+    }
+ }
+}
+
+.content-sec{
+    border-top: 1px solid #eaeaea;
+    padding-top: 25px;
+    .heading{
+        display: flex;
+        align-items: center;
+        h2{
+            color: #393939;
+            font-size: 80px;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-align: center;
+        }
+    }
+}
+
+.bonus-sec{
+    border-top: 1px solid #eaeaea;
+    padding-top: 25px;
+    h2{
+        color:#AB0A1A;
+        text-transform: uppercase;    
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    .coupon-box{
+        background-image: url(../../../assets/images/coupon-bg.png);       
+        background-size: 100% auto;
+        position: relative;
+        padding: 60px 45px;
+        border-radius: 8px;
+        border: 1px solid #fff6ce;
+        position: relative;
+        box-shadow: 2px 2px 8px rgba(0,0,0,.1);
+        h3{
+            color: #AB0A1A;
+            background: rgb(255 212 23 / 71%);
+            padding: 5px 8px;
+            position: absolute;
+            left: 30px;
+            font-size: 20px;
+            text-align: center;
+            font-weight: bold;
+            top: 5px;
+            border-radius: 8px;
+            text-transform: uppercase;
+        }
+        p {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 0;
+            strong{
+                color:#AB0A1A;
+                font-size: 25px;
+            }
+        }
+        &:before{
+            content: "";
+            width: calc(100% - 40px);
+            height: calc(100% - 40px);
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            border-radius: 6px;
+            border: 2px solid #ffefef;
+            position: absolute;
+        }
+    }
+}

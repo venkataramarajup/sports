@@ -1,0 +1,123 @@
+.home-banner {
+    position: relative;
+    overflow: hidden;
+   
+    .carousel-inner{
+        .carousel-caption {
+            padding: 40px 60px;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            display: flex !important;
+            flex-direction: column;
+            text-align: left;
+            justify-content: center;
+            max-width: 60%;
+            h5{
+                font-size: 50px;
+                font-weight: 800;
+                text-transform: uppercase;
+            }
+            p{
+
+            }
+        }
+    }
+    .carousel-indicators{
+        bottom: 50px;
+        [data-bs-target]{
+            width: 10px !important;
+            height: 10px !important;
+            border-radius: 50%;
+            background-color: transparent;
+            border: 2px solid #fff;
+            &.active{
+                background-color: #fff;
+            }
+        }
+    }
+}
+.curve{
+    width: 100%;
+    position: relative;
+    margin-top: -65px;
+    z-index: 9;
+    img{
+        width: 100%;
+    }
+}
+.title{
+    .h1-container{
+        text-transform: uppercase;
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        display: flex;
+        align-items: end;
+        h1{
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #fff;
+        }
+       }
+}
+.gray-sec{
+    background-color: #F0F0F0;
+}
+
+.sports-sec{
+    .white-down-curve-bg{
+        position: relative;
+        img{
+            position: absolute;
+            left: -6px;
+            top: -5px;
+            height: auto;
+            z-index: -1;
+            width: calc(100% + 10px);
+        }
+    }
+    .img-bg{
+        // img{
+        //     height: calc(100% - 10px);
+        //     margin-top: 5px;
+        // }
+    }
+    .white-up-curve-bg{
+        position: relative;
+        img{
+            position: absolute;
+            right: -6px;
+            top: -5px;
+            height: auto;
+            z-index: -1;
+            width: calc(100% + 10px);
+        }
+    }
+}
+.flyer{
+    margin: 30px 0 60px;
+    .strip{
+        background-color: #E2E2E2;
+        border-radius: 100px 0 100px 0;
+        padding: 20px;
+        position: relative;
+        // box-shadow: 0 3px 6px rgba(0,0,0, 0.16) inset 0 3px 6px rgba(0,0,0, 0.16);
+        img{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 160px;
+        }
+        .text{
+            p{
+                font-size: 26px;
+                margin: 0;
+            }
+        }
+    }
+}

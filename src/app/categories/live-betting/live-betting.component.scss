@@ -1,0 +1,193 @@
+.home-banner {
+    position: relative;
+    overflow: hidden;
+   
+    .carousel-inner{
+        .carousel-caption {
+            padding: 40px 60px;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            display: flex !important;
+            flex-direction: column;
+            text-align: left;
+            justify-content: center;
+            max-width: 60%;
+            h5{
+                font-size: 50px;
+                font-weight: 800;
+                text-transform: uppercase;
+            }
+            p{
+
+            }
+        }
+    }
+    .carousel-indicators{
+        bottom: 50px;
+        [data-bs-target]{
+            width: 10px !important;
+            height: 10px !important;
+            border-radius: 50%;
+            background-color: transparent;
+            border: 2px solid #fff;
+            &.active{
+                background-color: #fff;
+            }
+        }
+    }
+}
+.curve{
+    width: 100%;
+    position: relative;
+    margin-top: -65px;
+    z-index: 9;
+    img{
+        width: 100%;
+    }
+}
+.title{
+    .h1-container{
+        text-transform: uppercase;
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        display: flex;
+        align-items: end;
+        h1{
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #fff;
+        }
+       }
+}
+.gray-sec{
+    background-color: #F0F0F0;
+}
+
+.sports-sec{
+    .white-down-curve-bg{
+        position: relative;
+        img{
+            position: absolute;
+            left: -6px;
+            top: -5px;
+            height: auto;
+            z-index: -1;
+            width: calc(100% + 10px);
+        }
+    }
+    .img-bg{
+        // img{
+        //     height: calc(100% - 10px);
+        //     margin-top: 5px;
+        // }
+    }
+    .white-up-curve-bg{
+        position: relative;
+        img{
+            position: absolute;
+            right: -6px;
+            top: -5px;
+            height: auto;
+            z-index: -1;
+            width: calc(100% + 10px);
+        }
+    }
+}
+.flyer{
+    margin: 30px 0 60px;
+    .strip{
+        background-color: #E2E2E2;
+        border-radius: 100px 0 100px 0;
+        padding: 20px;
+        position: relative;
+        // box-shadow: 0 3px 6px rgba(0,0,0, 0.16) inset 0 3px 6px rgba(0,0,0, 0.16);
+        img{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 160px;
+        }
+        .text{
+            p{
+                font-size: 26px;
+                margin: 0;
+            }
+        }
+    }
+}
+.casino-sec{
+    .content {
+        position: relative;
+        width: 100%;
+        // max-width: 400px;
+        margin: auto;
+        overflow: hidden;
+        .content-overlay {
+            background: rgba(0,0,0,0.7);
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            opacity: 0;
+            -webkit-transition: all 0.4s ease-in-out 0s;
+            -moz-transition: all 0.4s ease-in-out 0s;
+            transition: all 0.4s ease-in-out 0s;
+        }
+        &:hover {
+            .content-overlay {
+                opacity: 1;
+            }
+            .content-details {
+                top: 50%;
+                left: 50%;
+                opacity: 1;
+            }
+        }
+        .content-image {
+            width: 100%;
+        }
+        .content-details {
+            position: absolute;
+            text-align: center;
+            padding-left: 1em;
+            padding-right: 1em;
+            width: 100%;
+            top: 50%;
+            left: 50%;
+            // opacity: 0;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            -webkit-transition: all 0.3s ease-in-out 0s;
+            -moz-transition: all 0.3s ease-in-out 0s;
+            transition: all 0.3s ease-in-out 0s;
+            padding: 15px;
+            background-color: rgba(211,0,26,0.7);
+            h3 {
+                color: #ffffff;
+                font-weight: 600;
+                letter-spacing: 0.1em;
+                margin-bottom: 0.5em;
+                text-transform: uppercase;
+            }
+            p {
+                color: #ffffff;
+                // font-size: 0.8em;
+            }
+        }
+        .fadeIn-bottom {
+            top: 80%;
+        }
+    }
+    
+}
+

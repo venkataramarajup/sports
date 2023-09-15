@@ -1,7 +1,7 @@
 :host{
     footer{
         background-color: #262626;
-        padding: 35px;
+        padding: 35px 0;
         .socialList {
             list-style: none;
             margin: 0;
@@ -33,18 +33,22 @@
         font-size: 16px;
     }
     a{
-        color:#fff;
+        color:#c5c5c5;
         text-decoration: none;
         display: block;
         font-size: 12px;
+        line-height: 26px;
     }
     p{
         color:#eaeaea;
+        line-height: 26px;
     }
     .social-media {
         ul{
             li{
+                padding: 5px 10px;
                 a{
+                    
                     i{
                         font-size: 30px;
                         color:#fff;

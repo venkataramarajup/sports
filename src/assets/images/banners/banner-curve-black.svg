@@ -1,0 +1,15 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 195" width="1920" height="195">
+	<title>banner-curve-red-svg</title>
+	<defs>
+		<image width="72" height="160" id="img1" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MS4wNjEiIGhlaWdodD0iMTU5LjIwMyIgdmlld0JveD0iMCAwIDcxLjA2MSAxNTkuMjAzIj4NCiAgPHJlY3QgaWQ9IlJlY3RhbmdsZV80MDQiIGRhdGEtbmFtZT0iUmVjdGFuZ2xlIDQwNCIgd2lkdGg9IjguNjg3IiBoZWlnaHQ9IjE2OC4xOTYiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMy4yNTQpIHJvdGF0ZSgtMjIpIiBmaWxsPSIjZmZmIi8+DQo8L3N2Zz4NCg=="/>
+	</defs>
+	<style>
+		.s0 { fill: #ffffff } 
+		.s1 { fill: #000000 } 
+	</style>
+	<path id="Path_115" class="s0" d="m0 169.4h1919.1v-141.3c0 0-336-63.2-852.1 0-516.1 63.1-932.9 11-1067 0"/>
+	<path id="Path_45" class="s1" d="m0 195.4h1919.1v-141.3c0 0-336-63.2-852.1 0-516.1 63.1-932.9 11-1067 0"/>
+	<use id="Rectangle 404" href="#img1" transform="matrix(1,0,0,1,136,46)"/>
+	<use id="Rectangle 404 copy" href="#img1" transform="matrix(1,0,0,1,119,46)"/>
+	<use id="Rectangle 404 copy 2" href="#img1" transform="matrix(1,0,0,1,102,46)"/>
+</svg>
