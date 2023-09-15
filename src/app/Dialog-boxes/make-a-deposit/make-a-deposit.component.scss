@@ -1,0 +1,107 @@
+p {
+    font-family: "Lato", sans-serif;
+    text-align: justify;
+}
+
+.example-card {
+    width: 450px;
+    // margin: 10px;
+    background-color: white;
+    padding: 0;
+    border-radius: 5px;
+    box-shadow: 5px 5px 20px black;
+}
+
+mat-card-subtitle {
+    font-size: 18px;
+    justify-content: center;
+}
+
+mat-card-title {
+    color: whitesmoke;
+    font-size: 20px;
+    margin: 0 !important;
+
+    // display: flex;
+
+}
+
+mat-card-header {
+    background: #AB0A1A;
+    padding: 5px;
+    justify-content: center;
+    margin: 0 !important;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.card-sub-title {
+    color: #484747;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.card-buttons {
+    margin: 0;
+    padding: 0 20px;
+}
+
+.cashbtncss {
+    // padding: 20px;
+    justify-content: center;
+    margin: 0;
+}
+
+.cashmode {
+    text-align: center;
+    padding: 20px;
+}
+
+.cashbtn {
+    padding: 3px 20px;
+    // padding-left: 20px;
+    // padding-right: 20px;
+    border-radius: 50px;
+    background-color: #AB0A1A;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    width: 150px;
+}
+
+.line {
+
+    padding: 10px;
+    text-align: center;
+}
+
+.nononlinedeposit {
+    padding: 10px;
+    text-align: center;
+}
+
+.nononlinedepositbtn {
+    padding: 3px 20px;
+    // padding-left: 20px;
+    // padding-right: 20px;
+    border-radius: 50px;
+    background-color: #AB0A1A;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    width: 350px;
+}
+
+.onlinemethods {
+    text-align: center;
+    color: gray;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.paymentgateway {
+    justify-content: center;
+}

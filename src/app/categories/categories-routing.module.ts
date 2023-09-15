@@ -11,6 +11,8 @@ import { HandiCapComponent } from './handi-cap/handi-cap.component';
 import { HelpCenterComponent } from './help-center/help-center.component';
 import { AllRulesComponent } from './all-rules/all-rules.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
+import { PrivacyAndPolicyComponent } from './privacy-and-policy/privacy-and-policy.component';
 
 const routes: Routes = [
   {
@@ -61,6 +63,14 @@ const routes: Routes = [
   {
     path: 'AboutUs',
     component: AboutUsComponent
+  },
+  {
+    path: 'TermsAndConditions',
+    component: TermsAndConditionsComponent
+  },
+  {
+    path: 'PrivacyPolicy',
+    component: PrivacyAndPolicyComponent
   },
 ];
 
