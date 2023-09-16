@@ -2,6 +2,21 @@
     footer{
         background-color: #262626;
         padding: 35px 0;
+        border-top: 10px solid #d3001a;
+        background-image: url(../../assets/images/imageFooter.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        position: relative;
+        &::before{
+            content: '';
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(67,67,67,0.5);
+            position: absolute;
+            z-index: 1;
+          }
         .socialList {
             list-style: none;
             margin: 0;
@@ -38,6 +53,9 @@
         display: block;
         font-size: 12px;
         line-height: 26px;
+        &:hover{
+            text-decoration: underline;
+        }
     }
     p{
         color:#eaeaea;

@@ -5,6 +5,10 @@ body{
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
 }
+h1,h2,h3,h4,h5{
+  font-weight: 700;
+  text-transform: uppercase;
+}
 .uppercase{
   text-transform: uppercase;
 }
@@ -17,17 +21,27 @@ body{
 .m-width-200{
   min-width: 200px;
 }
+.z-index-1{
+  z-index: 1;
+}
+.relative{
+  position: relative;
+}
 .border-left{
   border-left: 1px solid #AB0A1A;
 }
+.border-bottom{
+  border-bottom: 1px solid #AB0A1A;
+}
 .theme-btn{
-  background-color: #ff0000;
-  border-color: #ff0000;
+  background-color: #D3001A;
+  border-color: #D3001A;
   color: #fff;
   border-radius: 20px;
-  padding: 5px 15px;
+  padding: 6px 20px;
+  font-weight: 600;
   &:hover{
-    background-color: #e00707;
+    background-color: #e9112a;
     color: #fff;
   }
 }
