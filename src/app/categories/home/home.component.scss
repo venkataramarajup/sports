@@ -6,20 +6,7 @@
 .home-banner {
     position: relative;
     overflow: hidden;
-    // &:after{
-    //     content: '';
-    //     background-image: url("../../../assets/images/banners/banner-curve.svg");
-    //     position: absolute;
-    //     bottom: 0;
-    //     left: 0;
-    //     right: 0;
-    //     z-index: 9999;
-    //     height: 200px;
-    //     background-repeat: no-repeat;
-    //     pointer-events: none;
-    //     background-position: bottom;
-    //     background-size: 100% auto;
-    //    }
+   
     .carousel-inner{
         .carousel-caption {
             padding: 40px 60px;
@@ -36,9 +23,6 @@
                 font-size: 50px;
                 font-weight: 800;
                 text-transform: uppercase;
-            }
-            p{
-
             }
         }
     }
@@ -70,15 +54,15 @@
         text-align: center;
         .tile {
             display: inline-block;
-            margin: 10px;
+            margin: 10px 0;
             text-align: left;
             opacity: 0.99;
             overflow: hidden;
             position: relative;
-            border-radius: 3px;
+            border-radius: 8px;
             box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);      
             width: 100%;//by san
-            height: 109px;
+            height: 95px;
             &:before {
                 content: "";
                 background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
@@ -150,12 +134,12 @@
         // transform: translate(-50%, -50%);
         .tile {
             display: inline-block;
-            margin: 10px;
+            margin: 10px 0;
             text-align: left;
             opacity: 0.99;
             overflow: hidden;
             position: relative;
-            border-radius: 3px;
+            border-radius: 8px;
             box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
             padding-top: 100%; //by san
             width: 100%;//by san
