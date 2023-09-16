@@ -55,7 +55,7 @@ export class NavComponent implements OnInit {
         SubTitle: 'Online Deposit Methods'
       }
     })
-    dialogRef.afterClosed().subscribe(data => {
+    dialogRef.afterClosed().subscribe((data:any) => {
       console.log(data)
     })
   }
@@ -67,7 +67,7 @@ export class NavComponent implements OnInit {
         SubTitle: 'Online Deposit Methods'
       }
     })
-    dialogRef.afterClosed().subscribe(data => {
+    dialogRef.afterClosed().subscribe((data:any) => {
       console.log(data)
     })
   }
