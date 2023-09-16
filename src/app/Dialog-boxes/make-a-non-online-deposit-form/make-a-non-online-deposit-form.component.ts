@@ -15,6 +15,7 @@ export class MakeANonOnlineDepositFormComponent implements OnInit {
   selectedCardtype: any;
   cryptoValues: any;
   showcard: boolean = false;
+  title: any;
 
 
   constructor(@Inject(MAT_DIALOG_DATA) private data: any, private dialogRef: MatDialogRef<MakeANonOnlineDepositFormComponent>, private formbuilder: FormBuilder) {
@@ -25,10 +26,12 @@ export class MakeANonOnlineDepositFormComponent implements OnInit {
   ngOnInit(): void {
     this.showcard = false;
     // this.paymentCards = []
-    if (false) {
+    if (this.data.title !== 'Make a Non Online Deposit') {
+      this.title = this.data.title
       this.showdropdownfield = true;
       this.paymentCards = [{ name: 'Fedex / Western Union / Money Gram' }, { name: 'Crypto Currency' }]
     } else {
+      this.title = this.data.title
       this.paymentCards = [{ name: 'Visa / Master Card / AMEX' }, { name: 'Fedex / Western Union / Money Gram' }, { name: 'Crypto Currency' }]
       this.showdropdownfield = false;
     }
@@ -81,7 +84,11 @@ export class MakeANonOnlineDepositFormComponent implements OnInit {
   selectedvalue(val: any) {
     this.showcard = false;
     console.log(val)
-    this.cryptoValues = []
+    this.cryptoValues = [];
+    this.userform.controls['CardNumber'].clearValidators();
+    this.userform.controls['CardName'].clearValidators();
+    this.userform.controls['CVV'].clearValidators();
+    this.userform.controls['ExpirationDate'].clearValidators();
     if (val === 'Crypto Currency') {
       this.cryptoValues = [{ name: 'Bitcoin' }, { name: 'Etherium' }, { name: 'USDT' }, { name: 'USDC' }, { name: 'XRP' }, { name: 'Cardano' }, { name: 'Dogcoin' }, { name: 'Solana' }, { name: 'Litecoin' }, { name: 'Tron' },]
     } else if (val === 'Visa / Master Card / AMEX') {
