@@ -13,6 +13,9 @@ import { AllRulesComponent } from './all-rules/all-rules.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
 import { PrivacyAndPolicyComponent } from './privacy-and-policy/privacy-and-policy.component';
+import { HelpCenterCategoryComponent } from './help-center-category/help-center-category.component';
+import { PayoutPoliciesComponent } from './payout-policies/payout-policies.component';
+import { DepositPoliciesComponent } from './deposit-policies/deposit-policies.component';
 
 const routes: Routes = [
   {
@@ -57,6 +60,10 @@ const routes: Routes = [
     component: HelpCenterComponent
   },
   {
+    path: 'HelpCenter/:id',
+    component: HelpCenterCategoryComponent
+  },
+  {
     path: 'AllRules',
     component: AllRulesComponent
   },
@@ -71,6 +78,14 @@ const routes: Routes = [
   {
     path: 'PrivacyPolicy',
     component: PrivacyAndPolicyComponent
+  },
+  {
+    path: 'PayOutPolicie',
+    component: PayoutPoliciesComponent
+  },
+  {
+    path: 'DepositPolicie',
+    component: DepositPoliciesComponent
   },
 ];
 

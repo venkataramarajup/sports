@@ -15,6 +15,11 @@ import { AllRulesComponent } from './all-rules/all-rules.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
 import { PrivacyAndPolicyComponent } from './privacy-and-policy/privacy-and-policy.component';
+import { HelpCenterCategoryComponent } from './help-center-category/help-center-category.component';
+import { DepositPoliciesComponent } from './deposit-policies/deposit-policies.component';
+import { PayoutPoliciesComponent } from './payout-policies/payout-policies.component';
+import { FormsModule } from '@angular/forms';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 
 @NgModule({
@@ -31,11 +36,16 @@ import { PrivacyAndPolicyComponent } from './privacy-and-policy/privacy-and-poli
     AllRulesComponent,
     AboutUsComponent,
     TermsAndConditionsComponent,
-    PrivacyAndPolicyComponent
+    PrivacyAndPolicyComponent,
+    HelpCenterCategoryComponent,
+    DepositPoliciesComponent,
+    PayoutPoliciesComponent
   ],
   imports: [
     CommonModule,
-    CategoriesRoutingModule
+    CategoriesRoutingModule,
+    FormsModule,
+    Ng2SearchPipeModule
   ]
 })
 export class CategoriesModule { }

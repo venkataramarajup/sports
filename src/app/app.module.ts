@@ -18,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { MakeANonOnlineDepositFormComponent } from './Dialog-boxes/make-a-non-online-deposit-form/make-a-non-online-deposit-form.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +39,8 @@ import { MakeANonOnlineDepositFormComponent } from './Dialog-boxes/make-a-non-on
     ReactiveFormsModule,
     // MatDialogModule,
     // MatCardModule,
-    MaterialModule
+    MaterialModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
