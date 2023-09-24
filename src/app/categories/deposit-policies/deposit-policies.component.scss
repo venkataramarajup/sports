@@ -1,0 +1,130 @@
+.home-banner {
+    position: relative;
+    overflow: hidden;
+   
+    .carousel-inner{
+        .carousel-caption {
+            padding: 40px 60px;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            display: flex !important;
+            flex-direction: column;
+            text-align: left;
+            justify-content: center;
+            max-width: 60%;
+            h5{
+                font-size: 50px;
+                font-weight: 800;
+                text-transform: uppercase;
+            }
+        }
+    }
+    .carousel-indicators{
+        bottom: 50px;
+        [data-bs-target]{
+            width: 10px !important;
+            height: 10px !important;
+            border-radius: 50%;
+            background-color: transparent;
+            border: 2px solid #fff;
+            &.active{
+                background-color: #fff;
+            }
+        }
+    }
+}
+.video-banner{
+    width: 100%;
+}
+.curve{
+    width: 100%;
+    position: relative;
+    margin-top: -65px;
+    z-index: 9;
+    img{
+        width: 100%;
+    }
+}
+.border-bottom{
+    border-bottom: 1px solid #707070;
+}
+.white-box{
+    .box{
+        h2{
+            color: #AB0A1A;
+            text-transform: capitalize;
+            margin-bottom: 15px;
+        }
+        border-radius: 34px;
+        box-shadow: 0px 1px 6px rgba(0,0,0,0.3);
+        padding: 30px;
+    }
+}
+
+.theme-tabs{
+    ul.nav-pills{
+        width: 100%;
+        border-bottom: 1px solid #333;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+        li {
+            display: inline-block;
+            margin: 0 25px;
+    
+            a {
+                font-size: 20px;
+                font-weight: 700;
+                text-decoration: none;
+                text-align: center;
+                color: #4D4E4E;
+                text-transform: uppercase;
+                position: relative;
+    
+                .icon {
+                    width: 28px;
+                    height: 28px;
+                    border: 1px solid #3F3F3F;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 auto 2px;
+    
+                    img {
+                        width: 14px;
+                    }
+                }
+    
+                &:after {
+                    height: 3px;
+                    width: 0px;
+                    transition: 0.5s all ease;
+                    content: "";
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    right: 0;
+                    margin: -1px auto 0;
+                    background: #ff0000;
+                    z-index: 9;
+                }
+    
+                &.active, &:hover {
+                    background-color: transparent;
+                    span {
+                        background-color: #3F3F3F;
+                        color: #fff;
+                    }
+    
+                    &:after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -71,7 +71,7 @@
 
 
     <div class="dropdown ms-auto my-auto banking-dropdown">
-        <button class="btn btn-light dropdown-toggle px-3" type="button" data-bs-toggle="dropdown"
+        <button class="btn btn-light dropdown-toggle px-3 btn-lg" type="button" data-bs-toggle="dropdown"
             aria-expanded="false">
             Banking
         </button>
@@ -92,48 +92,47 @@
 </button> -->
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+<div class="modal fade make-a-deposit" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-md">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">{{title}}</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" #closeBtn></button>
+                <h3 class="modal-title fs-5" id="exampleModalLabel">{{title}}</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" #closeBtn> <i class="fa fa-close"></i> </button>
             </div>
-            <div class="modal-body">
-                <div class="card-sub-title">
+            <div class="modal-body text-center">
+                <div class="card-sub-title my-3">
                     {{subtitle}}
                 </div>
                 <div class="col-12 card-buttons">
-                    <div class="row cashbtncss">
-                        <div class="col-lg-6 col-md-12 col-xs-12 cashmode">
-                            <button class="cashbtn" (click)="buttonclicked(title,'CashApp')">Cash App</button>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12 col-xs-12">
+                            <button class="cashmode w-100 mt-4 btn btn-lg" (click)="buttonclicked(title,'CashApp')">Cash App</button>
                         </div>
-                        <div class="col-lg-6 col-md-12 col-xs-12 cashmode">
-                            <button class="cashbtn" (click)="buttonclicked(title,'PayPal')">PayPal</button>
+                        <div class="col-lg-6 col-md-12 col-xs-12">
+                            <button class="cashmode w-100 mt-4 btn btn-lg" (click)="buttonclicked(title,'PayPal')">PayPal</button>
                         </div>
                     </div>
-                    <div class="row cashbtncss">
-                        <div class="col-lg-6 col-md-12 col-xs-12 cashmode">
-                            <button class="cashbtn" (click)="buttonclicked(title,'Zelle')">Zelle</button>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12 col-xs-12">
+                            <button class="cashmode w-100 mt-4 btn btn-lg" (click)="buttonclicked(title,'Zelle')">Zelle</button>
                         </div>
-                        <div class="col-lg-6 col-md-12 col-xs-12 cashmode">
-                            <button class="cashbtn" (click)="buttonclicked(title,'venmo')">venmo</button>
+                        <div class="col-lg-6 col-md-12 col-xs-12">
+                            <button class="cashmode w-100 mt-4 btn btn-lg" (click)="buttonclicked(title,'venmo')">venmo</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 line">
-                    ------------------------------ or ------------------------------
+                <div class="row mx-0 px-5 my-4">
+                    <div class="col-12 line ">
+                        <span>Or</span>
+                     </div>
                 </div>
-                <div class="col-12 nononlinedeposit">
-                    <button class="nononlinedepositbtn" (click)="buttonclicked(title,button1)">{{button1}}</button>
+                <div class="col-12 card-buttons">
+                    <button class="cashmode w-100 mb-4 btn btn-lg" (click)="buttonclicked(title,button1)">{{button1}}</button>
                 </div>
-                <div class="col-12 onlinemethods">
-                    <div class="row paymentgateway">
-                        FedEx &nbsp;&nbsp;&nbsp;&nbsp; Westernunion \\WU
-                    </div>
-                    <div class="row paymentgateway">
-                        Crypto Currency Visa
-                    </div>
+                <div class="col-12 onlinemethods py-4">
+                  <div class="img">
+                    <img src="../../assets/images/cards.PNG" width="w-100">
+                  </div>
                 </div>
             </div>
             <!-- <div class="modal-footer">
