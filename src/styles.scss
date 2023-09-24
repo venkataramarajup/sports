@@ -2,12 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 body{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif !important;
     font-size: 14px;
+}
+a{
+  color: #242020 !important;
+  &:hover{
+    text-decoration: none;
+  }
 }
 h1,h2,h3,h4,h5{
   font-weight: 700;
   text-transform: uppercase;
+  color: #393939;
 }
 .p-title{
   color: #AB0A1A;
@@ -30,21 +37,22 @@ h1,h2,h3,h4,h5{
 .relative{
   position: relative;
 }
-.border-left{
+.border-left, .theme-bl{
   border-left: 1px solid #AB0A1A;
 }
-.border-bottom{
-  border-bottom: 1px solid #AB0A1A;
+.border-bottom, .theme-bb{
+  border-bottom: 1px solid #AB0A1A !important;
 }
+
 .theme-btn{
-  background-color: #D3001A;
-  border-color: #D3001A;
-  color: #fff;
-  border-radius: 20px;
-  padding: 6px 20px;
-  font-weight: 600;
+  background-color: #D3001A !important;
+  border-color: #D3001A !important;
+  color: #fff !important;
+  border-radius: 20px !important;
+  padding: 6px 20px !important;
+  font-weight: 600 !important;
   &:hover{
-    background-color: #e9112a;
+    background-color: #e9112a !important;
     color: #fff;
   }
 }
@@ -119,30 +127,30 @@ h1,h2,h3,h4,h5{
               font-size: 32px;
           }
         }
-    .line{
-      position: relative;
-      span{
-          color: #000;
-          padding: 5px 10px;
-          z-index: 9;
+        .line{
           position: relative;
-          font-size: 28px;            
-          font-weight: 700;
-          background: #fff;
-      }
-      &:before {
-          content: '';
-          width: 100%;
-          height: 0;
-          border-bottom: 2px dashed #929292;
-          position: absolute;
-          left: 0;
-          right: 0;
-          top: 0;
-          bottom: 0;
-          margin: auto 0;
-      }
-    }
+          span{
+              color: #000;
+              padding: 5px 10px;
+              z-index: 9;
+              position: relative;
+              font-size: 28px;            
+              font-weight: 700;
+              background: #fff;
+          }
+          &:before {
+              content: '';
+              width: 100%;
+              height: 0;
+              border-bottom: 2px dashed #929292;
+              position: absolute;
+              left: 0;
+              right: 0;
+              top: 0;
+              bottom: 0;
+              margin: auto 0;
+          }
+        }
       }
     }
   }
