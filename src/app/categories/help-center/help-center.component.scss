@@ -1,30 +1,35 @@
-.search-sec{
-    .video-banner{
+.search-sec {
+    .video-banner {
         width: 100%;
     }
-    .search-group{
+
+    .search-group {
         max-width: 100%;
         width: 70%;
         margin: auto;
         border-radius: 50px;
-        box-shadow: 0 1px 6px rgba(0,0,0,0.2);
-        h2{
-            color:#393939;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+
+        h2 {
+            color: #393939;
         }
-        .form-control{
+
+        .form-control {
             padding: 12px 20px;
             height: 50px;
             border-radius: 50px;
-            border: 0;           
+            border: 0;
         }
-        .input-group-text{
+
+        .input-group-text {
             background-color: transparent !important;
             border: 0 !important;
             text-align: center;
         }
     }
-    .product-slides{
-        .form-control{
+
+    .product-slides {
+        .form-control {
             padding: 12px 20px;
             height: 60px;
         }
@@ -33,20 +38,24 @@
 
 .product-slides {
     .carousel {
-        .carousel-control-next, .carousel-control-prev{
+
+        .carousel-control-next,
+        .carousel-control-prev {
             width: auto;
         }
-        .carousel-control-prev-icon{
+
+        .carousel-control-prev-icon {
             // background-image: none;
-        //    &:before {
-        //         font-family: "Font Awesome 6 Free";
-        //         content: "\f104";
-        //         color: #222;
-        //         font-weight: 900;
-        //         font-size: 30px;
-        //     }
+            //    &:before {
+            //         font-family: "Font Awesome 6 Free";
+            //         content: "\f104";
+            //         color: #222;
+            //         font-weight: 900;
+            //         font-size: 30px;
+            //     }
         }
-        .carousel-control-next-icon{
+
+        .carousel-control-next-icon {
             // background-image: none;
             // &:before {
             //     font-family: "Font Awesome 6 free";
@@ -56,12 +65,14 @@
             //     font-size: 30px;
             // }
         }
+
         .carousel-inner {
-        
-            .tiles{
+
+            .tiles {
                 display: flex;
                 justify-content: space-evenly;
-                .tile{
+
+                .tile {
                     margin: 10px;
                     width: 250px;
                     height: 250px;
@@ -74,26 +85,31 @@
                     padding: 15px;
                     background-color: #eaeaea;
                     text-align: center;
-                
+
                     position: relative;
-                    img{
+
+                    img {
                         position: absolute;
                         left: 0;
                         top: 0;
                         z-index: 0;
                         width: 100%;
                     }
-                    .text{
+
+                    .text {
                         z-index: 1;
-                        h4{
-                            color:#fff;
+
+                        h4 {
+                            color: #fff;
                             font-size: 26px;
                         }
-                        i{
+
+                        i {
                             font-size: 70px;
                             color: #fff;
                         }
                     }
+
                     &:before {
                         content: "";
                         background-color: rgba(0, 0, 0, 0.3);
@@ -106,13 +122,14 @@
                         pointer-events: none;
                     }
                 }
-               
+
             }
         }
     }
-   
+
 }
-.see-all{
+
+.see-all {
     color: #333;
     font-weight: bold;
     text-transform: uppercase;

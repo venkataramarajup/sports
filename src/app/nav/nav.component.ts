@@ -3,6 +3,7 @@ import { MakeADepositFormComponent } from '../Dialog-boxes/make-a-deposit-form/m
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { MakeADepositComponent } from '../Dialog-boxes/make-a-deposit/make-a-deposit.component';
 import { MakeANonOnlineDepositFormComponent } from '../Dialog-boxes/make-a-non-online-deposit-form/make-a-non-online-deposit-form.component';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 
 @Component({
@@ -13,14 +14,18 @@ import { MakeANonOnlineDepositFormComponent } from '../Dialog-boxes/make-a-non-o
 export class NavComponent implements OnInit {
   @ViewChild('closeBtn') closeBtn: ElementRef;
   @ViewChild('myModal') myModal: any;
+  userform: FormGroup;
 
   // formDialogRef: MatDialogRef<MakeADepositComponent>;
   // payformDialogRef: MatDialogRef<MakeADepositFormComponent>;
 
-  constructor(private dialog: MatDialog) { }
+  constructor(private dialog: MatDialog, private formbuilder: FormBuilder) { }
 
   ngOnInit(): void {
     // this.openform()
+    this.buildform();
+    this.buildnononlineform();
+    this.paymentCards = [{ name: 'Fedex / Western Union / Money Gram' }, { name: 'Crypto Currency' }]
   }
 
   title: any;
@@ -98,7 +103,7 @@ export class NavComponent implements OnInit {
         SubTitle: 'Online Deposit Methods'
       }
     })
-    dialogRef.afterClosed().subscribe((data:any) => {
+    dialogRef.afterClosed().subscribe((data: any) => {
       console.log(data)
     })
   }
@@ -110,9 +115,114 @@ export class NavComponent implements OnInit {
         SubTitle: 'Online Deposit Methods'
       }
     })
-    dialogRef.afterClosed().subscribe((data:any) => {
+    dialogRef.afterClosed().subscribe((data: any) => {
       console.log(data)
     })
+  }
+
+  enableCheckbox: any = false;
+  buildform() {
+    let obj: any = {
+      FirstName: ['', [Validators.required]],
+      LastName: ['', [Validators.required]],
+      PhoneNumber: ['', [Validators.required]],
+      Email: ['', [Validators.required]],
+      AccountName: ['', [Validators.required]],
+      Amount: ['', [Validators.required]]
+    }
+    this.userform = this.formbuilder.group(obj)
+  }
+  get userFormFields() {
+    return this.userform.controls;
+  }
+
+  sendformdata() {
+    console.log(this.userform)
+  }
+  fieldsChange(evt: any) {
+    this.enableCheckbox = evt.target.checked
+    console.log(evt)
+  }
+  senddata() {
+    console.log('2123')
+    console.log(this.userform)
+  }
+
+
+
+  /* Non online payment code */
+  nononlineuserform: FormGroup;
+  nononlineenableCheckbox: any = false;
+  showdropdownfield: boolean = false;
+  paymentCards: any = [{ name: 'Fedex / Western Union / Money Gram' }, { name: 'Crypto Currency' }];
+  selectedCardtype: any;
+  cryptoValues: any;
+  showcard: boolean = false;
+
+  buildnononlineform() {
+    let obj: any = {
+      FirstName: ['', [Validators.required]],
+      LastName: ['', [Validators.required]],
+      PhoneNumber: ['', [Validators.required]],
+      Email: ['', [Validators.required]],
+      AccountName: ['', [Validators.required]],
+      Amount: ['', [Validators.required]],
+      PaymentType: ['', [Validators.required]],
+      CardNumber: [''],
+      CardName: [''],
+      CVV: [''],
+      ExpirationDate: ['']
+    }
+    this.nononlineuserform = this.formbuilder.group(obj)
+  }
+  get nononlineuserFormFields() {
+    return this.nononlineuserform.controls;
+  }
+
+  sendnononlineformdata() {
+    console.log(this.nononlineuserform)
+  }
+  resetForm() {
+    this.userform.reset();
+    this.nononlineuserform.reset();
+    this.showcard = false;
+    this.cryptoValues = [];
+  }
+
+  sendnononlinedata() {
+    console.log('2123')
+    console.log(this.nononlineuserform)
+  }
+  nononlinefieldsChange(evt: any) {
+    this.nononlineenableCheckbox = evt.target.checked
+    console.log(evt)
+  }
+  selectedvalue(val: any) {
+    this.showcard = false;
+    console.log(val)
+    this.cryptoValues = [];
+    this.nononlineuserform.controls['CardNumber'].clearValidators();
+    this.nononlineuserform.controls['CardName'].clearValidators();
+    this.nononlineuserform.controls['CVV'].clearValidators();
+    this.nononlineuserform.controls['ExpirationDate'].clearValidators();
+    if (val === 'Crypto Currency') {
+      this.cryptoValues = [{ name: 'Bitcoin' }, { name: 'Etherium' }, { name: 'USDT' }, { name: 'USDC' }, { name: 'XRP' }, { name: 'Cardano' }, { name: 'Dogcoin' }, { name: 'Solana' }, { name: 'Litecoin' }, { name: 'Tron' },]
+    } else if (val === 'Visa / Master Card / AMEX') {
+      this.showcard = true;
+      console.log('123')
+      // this.nononlineuserform.get('CardNumber').addValidators(Validators.required)
+      this.nononlineuserform.controls['CardNumber'].setValidators([Validators.required])
+      this.nononlineuserform.controls['CardNumber'].updateValueAndValidity();
+
+      this.nononlineuserform.controls['CardName'].setValidators([Validators.required])
+      this.nononlineuserform.controls['CardName'].updateValueAndValidity();
+
+      this.nononlineuserform.controls['CVV'].setValidators([Validators.required])
+      this.nononlineuserform.controls['CVV'].updateValueAndValidity();
+
+      this.nononlineuserform.controls['ExpirationDate'].setValidators([Validators.required])
+      this.nononlineuserform.controls['ExpirationDate'].updateValueAndValidity();
+    }
   }
 
 }
