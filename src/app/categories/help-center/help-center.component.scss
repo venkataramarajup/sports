@@ -30,7 +30,15 @@
         }
     }
 }
-
+.curve{
+    width: 100%;
+    position: relative;
+    margin-top: -65px;
+    z-index: 9;
+    img{
+        width: 100%;
+    }
+}
 .product-slides {
     .carousel {
         .carousel-control-next, .carousel-control-prev{
