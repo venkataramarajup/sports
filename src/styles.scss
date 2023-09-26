@@ -1,160 +1,190 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-body{
-    font-family: 'Montserrat', sans-serif !important;
-    font-size: 14px;
+body {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 14px;
 }
-a{
+
+a {
   color: #242020 !important;
-  &:hover{
+
+  &:hover {
     text-decoration: none;
   }
 }
-h1,h2,h3,h4,h5{
+
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-weight: 700;
   text-transform: uppercase;
   color: #393939;
 }
-.p-title{
+
+.p-title {
   color: #AB0A1A;
 }
-.uppercase{
+
+.uppercase {
   text-transform: uppercase;
 }
-.m-width-100{
+
+.m-width-100 {
   min-width: 100px;
 }
-.m-width-150{
+
+.m-width-150 {
   min-width: 150px;
 }
-.m-width-200{
+
+.m-width-200 {
   min-width: 200px;
 }
-.z-index-1{
+
+.z-index-1 {
   z-index: 1;
 }
-.relative{
+
+.relative {
   position: relative;
 }
-.border-left, .theme-bl{
+
+.border-left,
+.theme-bl {
   border-left: 1px solid #AB0A1A;
 }
-.border-bottom, .theme-bb{
+
+.border-bottom,
+.theme-bb {
   border-bottom: 1px solid #AB0A1A !important;
 }
 
-.theme-btn{
+.theme-btn {
   background-color: #D3001A !important;
   border-color: #D3001A !important;
   color: #fff !important;
   border-radius: 20px !important;
   padding: 6px 20px !important;
   font-weight: 600 !important;
-  &:hover{
+
+  &:hover {
     background-color: #e9112a !important;
     color: #fff;
   }
 }
 
-.accordion-item{
+.accordion-item {
   .accordion-button:not(.collapsed) {
     color: #fff !important;
     background-color: #242020 !important;
     box-shadow: none !important
   }
 }
-.accordion-button::after{
+
+.accordion-button::after {
   background-image: none !important;
   content: "\f077" !important;
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
   color: #000;
 }
-.accordion-button:not(.collapsed)::after{
+
+.accordion-button:not(.collapsed)::after {
   background-image: none;
   // content: "\f078";
   // font-family: "Font Awesome 6 Free";
   // font-weight: 900;
   color: #fff !important;
 }
-.modal{
-  .modal-dialog{
+
+.modal {
+  .modal-dialog {
     .modal-content {
-      .modal-header{
+      .modal-header {
         display: flex;
         align-items: center;
-        .modal-title{
+
+        .modal-title {
           text-align: center;
           text-transform: capitalize;
           font-weight: 700;
           font-size: 34px !important;
           margin: auto;
-          color:#fff;
+          color: #fff;
         }
+
         background-color: #AB0A1A;
-       .btn-close{
-        position: absolute;
-        right: 15px;
-        top: auto;
-        background: none;
-        font-size: 22px;
-        color: #fff;
-        border-radius: 50%;
-        border: 2px solid #fff;
-        height: 24px;
-        width: 24px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: auto 0;
-        bottom: auto;
-       }
+
+        .btn-close {
+          position: absolute;
+          right: 15px;
+          top: auto;
+          background: none;
+          font-size: 22px;
+          color: #fff;
+          border-radius: 50%;
+          border: 2px solid #fff;
+          height: 24px;
+          width: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: auto 0;
+          bottom: auto;
+        }
       }
-      .modal-body{
-        .card-sub-title{
+
+      .modal-body {
+        .card-sub-title {
           font-size: 30px;
           color: #000;
           font-weight: 500;
         }
-        .card-buttons{
+
+        .card-buttons {
           padding: 5px 10%;
-          .cashmode{
-              background: #ab0a1a;
-              color: #fff;
-              border-radius: 40px;
-              font-weight: 700;
-              font-size: 32px;
+
+          .cashmode {
+            background: #ab0a1a;
+            color: #fff;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 32px;
           }
         }
-        .line{
+
+        .line {
           position: relative;
-          span{
-              color: #000;
-              padding: 5px 10px;
-              z-index: 9;
-              position: relative;
-              font-size: 28px;            
-              font-weight: 700;
-              background: #fff;
+
+          span {
+            color: #000;
+            padding: 5px 10px;
+            z-index: 9;
+            position: relative;
+            font-size: 28px;
+            font-weight: 700;
+            background: #fff;
           }
+
           &:before {
-              content: '';
-              width: 100%;
-              height: 0;
-              border-bottom: 2px dashed #929292;
-              position: absolute;
-              left: 0;
-              right: 0;
-              top: 0;
-              bottom: 0;
-              margin: auto 0;
+            content: '';
+            width: 100%;
+            height: 0;
+            border-bottom: 2px dashed #929292;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
           }
         }
       }
     }
   }
 }
-@media only screen and (max-width: 600px) {
-  
-}
+
+@media only screen and (max-width: 600px) {}

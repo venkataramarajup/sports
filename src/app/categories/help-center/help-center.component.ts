@@ -39,6 +39,7 @@ export class HelpCenterComponent implements OnInit {
 
   ngOnInit(): void {
     this.expandarray = Array(100).fill(false);
+    this.expandarray[0] = true;
   }
 
   selectedcategory(id: any) {
@@ -46,6 +47,7 @@ export class HelpCenterComponent implements OnInit {
   }
   expandarray: any = Array(100).fill(false)
   expand(i: any) {
+    this.expandarray = Array(100).fill(false);
     if (this.expandarray[i] === false) {
       this.expandarray[i] = true;
     } else {

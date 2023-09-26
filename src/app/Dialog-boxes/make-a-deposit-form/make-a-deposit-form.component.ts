@@ -35,7 +35,7 @@ export class MakeADepositFormComponent implements OnInit {
     // });
   }
   openModel() {
-    this.myModal.nativeElement.className = 'modal fade show';
+    // this.myModal.nativeElement.className = 'modal fade show';
     //  this.myModal.nativeElement.className = 'modal hide';
   }
 

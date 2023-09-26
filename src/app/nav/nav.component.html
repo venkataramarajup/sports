@@ -92,12 +92,14 @@
 </button> -->
 
 <!-- Modal -->
-<div class="modal fade make-a-deposit" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade make-a-deposit" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog modal-lg modal-md">
         <div class="modal-content">
             <div class="modal-header">
                 <h3 class="modal-title fs-5" id="exampleModalLabel">{{title}}</h3>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" #closeBtn> <i class="fa fa-close"></i> </button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" #closeBtn> <i
+                        class="fa fa-close"></i> </button>
             </div>
             <div class="modal-body text-center">
                 <div class="card-sub-title my-3">
@@ -106,33 +108,39 @@
                 <div class="col-12 card-buttons">
                     <div class="row">
                         <div class="col-lg-6 col-md-12 col-xs-12">
-                            <button class="cashmode w-100 mt-4 btn btn-lg" (click)="buttonclicked(title,'CashApp')">Cash App</button>
+                            <button class="cashmode w-100 mt-4 btn btn-lg" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal123">Cash
+                                App</button>
                         </div>
                         <div class="col-lg-6 col-md-12 col-xs-12">
-                            <button class="cashmode w-100 mt-4 btn btn-lg" (click)="buttonclicked(title,'PayPal')">PayPal</button>
+                            <button class="cashmode w-100 mt-4 btn btn-lg" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal123">PayPal</button>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-6 col-md-12 col-xs-12">
-                            <button class="cashmode w-100 mt-4 btn btn-lg" (click)="buttonclicked(title,'Zelle')">Zelle</button>
+                            <button class="cashmode w-100 mt-4 btn btn-lg" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal123">Zelle</button>
                         </div>
                         <div class="col-lg-6 col-md-12 col-xs-12">
-                            <button class="cashmode w-100 mt-4 btn btn-lg" (click)="buttonclicked(title,'venmo')">venmo</button>
+                            <button class="cashmode w-100 mt-4 btn btn-lg" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal123">venmo</button>
                         </div>
                     </div>
                 </div>
                 <div class="row mx-0 px-5 my-4">
                     <div class="col-12 line ">
                         <span>Or</span>
-                     </div>
+                    </div>
                 </div>
                 <div class="col-12 card-buttons">
-                    <button class="cashmode w-100 mb-4 btn btn-lg" (click)="buttonclicked(title,button1)">{{button1}}</button>
+                    <button class="cashmode w-100 mb-4 btn btn-lg" data-bs-toggle="modal"
+                        data-bs-target="#nononlineuser">{{button1}}</button>
                 </div>
                 <div class="col-12 onlinemethods py-4">
-                  <div class="img">
-                    <img src="../../assets/images/cards.PNG" width="w-100">
-                  </div>
+                    <div class="img">
+                        <img src="../../assets/images/cards.PNG" width="w-100">
+                    </div>
                 </div>
             </div>
             <!-- <div class="modal-footer">
@@ -148,3 +156,286 @@
 <!-- <div (click)="opendialog()">open dialog</div> -->
 <!-- <div (click)="openform()">open form</div>
 <div (click)="opennononlinedialog()">non online open form</div> -->
+
+
+<!-- cash app form -->
+
+<div class="modal fade make-a-deposit" id="exampleModal123" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title fs-5" id="exampleModalLabel">{{title}}</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" #closeBtn> <i
+                        class="fa fa-close"></i> </button>
+            </div>
+            <div class="modal-body text-center">
+                <form [formGroup]="userform" class="dialog-form" (ngSubmit)="sendformdata()">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="firstname">First Name <span class="mandatory-star">*</span></label>
+                            <input type="text" class="form-control form-input" id="firstname" placeholder=""
+                                formControlName="FirstName">
+                            <!-- <div class="invalidFeedback"
+                                *ngIf="userFormFields.FirstName.errors && userFormFields.FirstName.errors.required && (userFormFields.FirstName.touched || userFormFields.FirstName.dirty)">
+                                This field is required
+                            </div> -->
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname">Last Name <span class="mandatory-star">*</span></label>
+                            <input type="text" class="form-control form-input" id="Lastname" placeholder=""
+                                formControlName="LastName">
+                            <!-- <div class="invalidFeedback"
+                                *ngIf="userFormFields.LastName.errors && userFormFields.LastName.errors.required && (userFormFields.LastName.touched || userFormFields.LastName.dirty)">
+                                This field is required
+                            </div> -->
+                        </div>
+                        <div class="form-group">
+                            <label for="PhoneNumber">Phone Number <span class="mandatory-star">*</span></label>
+                            <input type="text" class="form-control form-input" id="PhoneNumber" placeholder=""
+                                formControlName="PhoneNumber">
+                            <!-- <div class="invalidFeedback"
+                                *ngIf="userFormFields.PhoneNumber.errors && userFormFields.PhoneNumber.errors.required && (userFormFields.PhoneNumber.touched || userFormFields.PhoneNumber.dirty)">
+                                This field is required
+                            </div> -->
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Email">Email <span class="mandatory-star">*</span></label>
+                            <input type="text" class="form-control form-input" id="Email" placeholder=""
+                                formControlName="Email">
+                            <!-- <div class="invalidFeedback"
+                                *ngIf="userFormFields.Email.errors && userFormFields.Email.errors.required && (userFormFields.Email.touched || userFormFields.Email.dirty)">
+                                This field is required
+                            </div> -->
+                        </div>
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-6 form-group">
+                                    <label for="AccountName">Account Name <span class="mandatory-star">*</span></label>
+                                    <input type="text" class="form-control form-input" id="AccountName" placeholder=""
+                                        formControlName="AccountName">
+                                    <!-- <div class="invalidFeedback"
+                                        *ngIf="userFormFields.AccountName.errors && userFormFields.AccountName.errors.required && (userFormFields.AccountName.touched || userFormFields.AccountName.dirty)">
+                                        This field is required
+                                    </div> -->
+                                </div>
+                                <div class="col-6 form-group">
+                                    <label for="Amount">Amount <span class="mandatory-star">*</span></label>
+                                    <input type="text" class="form-control form-input" id="Amount" placeholder=""
+                                        formControlName="Amount">
+                                    <!-- <div class="invalidFeedback"
+                                        *ngIf="userFormFields.Amount.errors && userFormFields.Amount.errors.required && (userFormFields.Amount.touched || userFormFields.Amount.dirty)">
+                                        This field is required
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            *Espacio required
+                        </div>
+                        <div class="col-12">
+                            <input type="checkbox" class="form-input" id="checkbox" placeholder=""
+                                (change)="fieldsChange($event)">
+                            Accept Terms, Conditions and Policies
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <!-- <button type="button" class="btn btn-secondary" (click)="resetForm()">Cancel</button> -->
+                        <button type="button" class="btn btn-primary" (click)="senddata()"
+                            [disabled]="userform.status === 'INVALID' || !enableCheckbox">Save</button>
+                    </div>
+                </form>
+
+            </div>
+            <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div> -->
+        </div>
+    </div>
+</div>
+
+<!-- non online form -->
+<div class="modal fade make-a-deposit" id="nononlineuser" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title fs-5" id="exampleModalLabel">Non Online</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" #closeBtn> <i
+                        class="fa fa-close"></i> </button>
+            </div>
+            <div class="modal-body text-center">
+                <form [formGroup]="nononlineuserform" class="dialog-form" (ngSubmit)="sendnononlineformdata()">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="firstname">First Name <span class="mandatory-star">*</span></label>
+                            <input type="text" class="form-control form-input" id="firstname" placeholder=""
+                                formControlName="FirstName">
+                            <!-- <div class="invalidFeedback"
+                                *ngIf="userFormFields.FirstName.errors && userFormFields.FirstName.errors.required && (userFormFields.FirstName.touched || userFormFields.FirstName.dirty)">
+                                This field is required
+                            </div> -->
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname">Last Name <span class="mandatory-star">*</span></label>
+                            <input type="text" class="form-control form-input" id="Lastname" placeholder=""
+                                formControlName="LastName">
+                            <!-- <div class="invalidFeedback"
+                                *ngIf="userFormFields.LastName.errors && userFormFields.LastName.errors.required && (userFormFields.LastName.touched || userFormFields.LastName.dirty)">
+                                This field is required
+                            </div> -->
+                        </div>
+                        <div class="form-group">
+                            <label for="PhoneNumber">Phone Number <span class="mandatory-star">*</span></label>
+                            <input type="text" class="form-control form-input" id="PhoneNumber" placeholder=""
+                                formControlName="PhoneNumber">
+                            <!-- <div class="invalidFeedback"
+                                *ngIf="userFormFields.PhoneNumber.errors && userFormFields.PhoneNumber.errors.required && (userFormFields.PhoneNumber.touched || userFormFields.PhoneNumber.dirty)">
+                                This field is required
+                            </div> -->
+                        </div>
+                        <div class="form-group">
+                            <label for="Email">Email <span class="mandatory-star">*</span></label>
+                            <input type="text" class="form-control form-input" id="Email" placeholder=""
+                                formControlName="Email">
+                            <!-- <div class="invalidFeedback"
+                                *ngIf="userFormFields.Email.errors && userFormFields.Email.errors.required && (userFormFields.Email.touched || userFormFields.Email.dirty)">
+                                This field is required
+                            </div> -->
+                        </div>
+                        <div class="form-group">
+                            <label for="Email">Email <span class="mandatory-star">*</span></label>
+                            <input type="text" class="form-control form-input" id="Email" placeholder=""
+                                formControlName="Email">
+                            <!-- <div class="invalidFeedback"
+                                *ngIf="userFormFields.Email.errors && userFormFields.Email.errors.required && (userFormFields.Email.touched || userFormFields.Email.dirty)">
+                                This field is required
+                            </div> -->
+                        </div>
+                        <div class="form-group">
+                            <label for="AccountName">Account Name <span class="mandatory-star">*</span></label>
+                            <input type="text" class="form-control form-input" id="AccountName" placeholder=""
+                                formControlName="AccountName">
+                            <!-- <div class="invalidFeedback"
+                                *ngIf="userFormFields.AccountName.errors && userFormFields.AccountName.errors.required && (userFormFields.AccountName.touched || userFormFields.AccountName.dirty)">
+                                This field is required
+                            </div> -->
+                        </div>
+                        <div class="col-12">
+                            <div class="row">
+
+                                <div class="col-3 form-group">
+                                    <label for="Amount">Amount <span class="mandatory-star">*</span></label>
+                                    <input type="text" class="form-control form-input" id="Amount" placeholder=""
+                                        formControlName="Amount">
+                                    <!-- <div class="invalidFeedback"
+                                        *ngIf="userFormFields.Amount.errors && userFormFields.Amount.errors.required && (userFormFields.Amount.touched || userFormFields.Amount.dirty)">
+                                        This field is required
+                                    </div> -->
+                                </div>
+                                <div class="col-9 form-group">
+                                    <label for="AccountName"><span class="mandatory-star"></span></label>
+                                    <div class="select-group">
+                                        <select id="PaymentType" class="form-control form-select"
+                                            formControlName="PaymentType" (change)="selectedvalue(selectedCardtype)"
+                                            [(ngModel)]="selectedCardtype">
+                                            <option value="-1" disabled>Select a Pay Out Option</option>
+                                            <option *ngFor="let name of paymentCards" value={{name.name}}>{{name.name}}
+                                            </option>
+
+                                            <!-- <option>Crypto Currency</option> -->
+                                        </select>
+
+                                    </div>
+                                    <!-- <div class="invalidFeedback"
+                                        *ngIf="userFormFields.AccountName.errors && userFormFields.AccountName.errors.required && (userFormFields.AccountName.touched || userFormFields.AccountName.dirty)">
+                                        This field is required
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-3">
+                                    *Espacio required
+                                </div>
+                                <div class="col-9">
+                                    <div *ngIf="cryptoValues?.length > 0">
+                                        <div *ngFor="let cryptoname of cryptoValues" class="cryptocss">
+                                            {{cryptoname.name}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div *ngIf="showcard">
+                            <div class="form-group">
+                                <label for="CardNumber">CardNumber <span class="mandatory-star">*</span></label>
+                                <input type="text" class="form-control form-input" id="CardNumber" placeholder=""
+                                    formControlName="CardNumber">
+                                <!-- <div class="invalidFeedback"
+                                    *ngIf="userFormFields.Amount.errors && userFormFields.Amount.errors.required && (userFormFields.Amount.touched || userFormFields.Amount.dirty)">
+                                    This field is required
+                                </div> -->
+                            </div>
+                            <div class="form-group">
+                                <label for="CardName">Card Name <span class="mandatory-star">*</span></label>
+                                <input type="text" class="form-control form-input" id="CardName" placeholder=""
+                                    formControlName="CardName">
+                                <!-- <div class="invalidFeedback"
+                                    *ngIf="userFormFields.Amount.errors && userFormFields.Amount.errors.required && (userFormFields.Amount.touched || userFormFields.Amount.dirty)">
+                                    This field is required
+                                </div> -->
+                            </div>
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-6 form-group">
+                                        <label for="CVV">CVV <span class="mandatory-star">*</span></label>
+                                        <input type="text" class="form-control form-input" id="CVV" placeholder=""
+                                            formControlName="CVV">
+                                        <!-- <div class="invalidFeedback"
+                                            *ngIf="userFormFields.Amount.errors && userFormFields.Amount.errors.required && (userFormFields.Amount.touched || userFormFields.Amount.dirty)">
+                                            This field is required
+                                        </div> -->
+                                    </div>
+                                    <div class="col-6 form-group">
+                                        <label for="ExpirationDate">Expiration <span
+                                                class="mandatory-star">*</span></label>
+                                        <input type="text" class="form-control form-input" id="ExpirationDate"
+                                            placeholder="" formControlName="ExpirationDate">
+                                        <!-- <div class="invalidFeedback"
+                                            *ngIf="userFormFields.Amount.errors && userFormFields.Amount.errors.required && (userFormFields.Amount.touched || userFormFields.Amount.dirty)">
+                                            This field is required
+                                        </div> -->
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- <div class="col-12">
+                            <input type="checkbox" class="form-input" id="checkbox" placeholder=""
+                                (change)="fieldsChange($event)">
+                            Accept Terms, Conditions and Policies
+                        </div> -->
+                    </div>
+
+                    <div class="modal-footer">
+                        <!-- <button type="button" class="btn btn-secondary" (click)="resetForm()">Cancel</button> -->
+                        <button type="button" class="btn btn-primary" (click)="sendnononlinedata()"
+                            [disabled]="nononlineuserform.status === 'INVALID'">Save</button>
+                    </div>
+                </form>
+
+            </div>
+            <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div> -->
+        </div>
+    </div>
+</div>
