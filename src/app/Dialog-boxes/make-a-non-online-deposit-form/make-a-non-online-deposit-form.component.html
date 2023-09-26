@@ -3,9 +3,9 @@
         <mat-card-title>{{title}}</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-        <form [formGroup]="userform" class="dialog-form" (ngSubmit)="sendformdata()">
+        <form [formGroup]="nononlineuserform" class="dialog-form" (ngSubmit)="senddata()">
             <div class="modal-body">
-                <div class="form-group">
+                <div class="form-group mb-3">
                     <label for="firstname">First Name <span class="mandatory-star">*</span></label>
                     <input type="text" class="form-control form-input" id="firstname" placeholder=""
                         formControlName="FirstName">
@@ -14,7 +14,7 @@
                         This field is required
                     </div> -->
                 </div>
-                <div class="form-group">
+                <div class="form-group mb-3">
                     <label for="lastname">Last Name <span class="mandatory-star">*</span></label>
                     <input type="text" class="form-control form-input" id="Lastname" placeholder=""
                         formControlName="LastName">
@@ -23,7 +23,7 @@
                         This field is required
                     </div> -->
                 </div>
-                <div class="form-group">
+                <div class="form-group mb-3">
                     <label for="PhoneNumber">Phone Number <span class="mandatory-star">*</span></label>
                     <input type="text" class="form-control form-input" id="PhoneNumber" placeholder=""
                         formControlName="PhoneNumber">
@@ -32,7 +32,7 @@
                         This field is required
                     </div> -->
                 </div>
-                <div class="form-group">
+                <div class="form-group mb-3">
                     <label for="Email">Email <span class="mandatory-star">*</span></label>
                     <input type="text" class="form-control form-input" id="Email" placeholder=""
                         formControlName="Email">
@@ -41,7 +41,7 @@
                         This field is required
                     </div> -->
                 </div>
-                <div class="form-group">
+                <div class="form-group mb-3">
                     <label for="Email">Email <span class="mandatory-star">*</span></label>
                     <input type="text" class="form-control form-input" id="Email" placeholder=""
                         formControlName="Email">
@@ -50,7 +50,7 @@
                         This field is required
                     </div> -->
                 </div>
-                <div class="form-group">
+                <div class="form-group mb-3">
                     <label for="AccountName">Account Name <span class="mandatory-star">*</span></label>
                     <input type="text" class="form-control form-input" id="AccountName" placeholder=""
                         formControlName="AccountName">
@@ -62,7 +62,7 @@
                 <div class="col-12">
                     <div class="row">
 
-                        <div class="col-3 form-group">
+                        <div class="col-3 form-group  mb-3">
                             <label for="Amount">Amount <span class="mandatory-star">*</span></label>
                             <input type="text" class="form-control form-input" id="Amount" placeholder=""
                                 formControlName="Amount">
@@ -71,12 +71,12 @@
                                 This field is required
                             </div> -->
                         </div>
-                        <div class="col-9 form-group">
+                        <div class="col-9 form-group  mb-3">
                             <label for="AccountName"><span class="mandatory-star"></span></label>
                             <div class="select-group">
                                 <select id="PaymentType" class="form-control form-select" formControlName="PaymentType"
                                     (change)="selectedvalue(selectedCardtype)" [(ngModel)]="selectedCardtype">
-                                    <option value="-1" disabled>Select a Pay Out Option</option>
+                                    <option value="-1" disabled selected>Select a {{deposit}} Option</option>
                                     <option *ngFor="let name of paymentCards" value={{name.name}}>{{name.name}}
                                     </option>
 
@@ -94,9 +94,9 @@
                 <div class="col-12">
                     <div class="row">
                         <div class="col-3">
-                            *Espacio required
+                            <!-- *Espacio required -->
                         </div>
-                        <div class="col-9">
+                        <div class="col-9  mb-3">
                             <div *ngIf="cryptoValues?.length > 0">
                                 <div *ngFor="let cryptoname of cryptoValues" class="cryptocss">
                                     {{cryptoname.name}}
@@ -106,8 +106,15 @@
                     </div>
 
                 </div>
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-12  mb-3">
+                            *Espacio required
+                        </div>
+                    </div>
+                </div>
                 <div *ngIf="showcard">
-                    <div class="form-group">
+                    <div class="form-group mb-3">
                         <label for="CardNumber">CardNumber <span class="mandatory-star">*</span></label>
                         <input type="text" class="form-control form-input" id="CardNumber" placeholder=""
                             formControlName="CardNumber">
@@ -116,7 +123,7 @@
                             This field is required
                         </div> -->
                     </div>
-                    <div class="form-group">
+                    <div class="form-group mb-3">
                         <label for="CardName">Card Name <span class="mandatory-star">*</span></label>
                         <input type="text" class="form-control form-input" id="CardName" placeholder=""
                             formControlName="CardName">
@@ -127,7 +134,7 @@
                     </div>
                     <div class="col-12">
                         <div class="row">
-                            <div class="col-6 form-group">
+                            <div class="col-6 form-group mb-3">
                                 <label for="CVV">CVV <span class="mandatory-star">*</span></label>
                                 <input type="text" class="form-control form-input" id="CVV" placeholder=""
                                     formControlName="CVV">
@@ -136,7 +143,7 @@
                                     This field is required
                                 </div> -->
                             </div>
-                            <div class="col-6 form-group">
+                            <div class="col-6 form-group mb-3">
                                 <label for="ExpirationDate">Expiration <span class="mandatory-star">*</span></label>
                                 <input type="text" class="form-control form-input" id="ExpirationDate" placeholder=""
                                     formControlName="ExpirationDate">
@@ -157,10 +164,10 @@
                 </div> -->
             </div>
 
-            <div class="modal-footer">
+            <div class="modal-footer border-0">
                 <!-- <button type="button" class="btn btn-secondary" (click)="resetForm()">Cancel</button> -->
-                <button type="button" class="btn btn-primary" (click)="senddata()"
-                    [disabled]="userform.status === 'INVALID'">Save</button>
+                <button type="button" class="btn theme-btn mx-auto" (click)="senddata()"
+                    [disabled]="nononlineuserform.status === 'INVALID'">SAVE</button>
             </div>
         </form>
 

@@ -3,68 +3,68 @@
         <mat-card-title>{{title}}</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-        <form [formGroup]="userform" class="dialog-form" (ngSubmit)="sendformdata()">
-            <div class="modal-body">
-                <div class="form-group">
+        <form [formGroup]="userform" class="dialog-form" (ngSubmit)="senddata()">
+            <div class="modal-body px-4">
+                <div class="form-group mb-3">
                     <label for="firstname">First Name <span class="mandatory-star">*</span></label>
                     <input type="text" class="form-control form-input" id="firstname" placeholder=""
                         formControlName="FirstName">
                     <!-- <div class="invalidFeedback"
-                        *ngIf="userFormFields.FirstName.errors && userFormFields.FirstName.errors.required && (userFormFields.FirstName.touched || userFormFields.FirstName.dirty)">
-                        This field is required
-                    </div> -->
+                            *ngIf="userFormFields.FirstName.errors && userFormFields.FirstName.errors.required && (userFormFields.FirstName.touched || userFormFields.FirstName.dirty)">
+                            This field is required
+                        </div> -->
                 </div>
-                <div class="form-group">
+                <div class="form-group mb-3">
                     <label for="lastname">Last Name <span class="mandatory-star">*</span></label>
                     <input type="text" class="form-control form-input" id="Lastname" placeholder=""
                         formControlName="LastName">
                     <!-- <div class="invalidFeedback"
-                        *ngIf="userFormFields.LastName.errors && userFormFields.LastName.errors.required && (userFormFields.LastName.touched || userFormFields.LastName.dirty)">
-                        This field is required
-                    </div> -->
+                            *ngIf="userFormFields.LastName.errors && userFormFields.LastName.errors.required && (userFormFields.LastName.touched || userFormFields.LastName.dirty)">
+                            This field is required
+                        </div> -->
                 </div>
-                <div class="form-group">
+                <div class="form-group mb-3">
                     <label for="PhoneNumber">Phone Number <span class="mandatory-star">*</span></label>
                     <input type="text" class="form-control form-input" id="PhoneNumber" placeholder=""
                         formControlName="PhoneNumber">
                     <!-- <div class="invalidFeedback"
-                        *ngIf="userFormFields.PhoneNumber.errors && userFormFields.PhoneNumber.errors.required && (userFormFields.PhoneNumber.touched || userFormFields.PhoneNumber.dirty)">
-                        This field is required
-                    </div> -->
+                            *ngIf="userFormFields.PhoneNumber.errors && userFormFields.PhoneNumber.errors.required && (userFormFields.PhoneNumber.touched || userFormFields.PhoneNumber.dirty)">
+                            This field is required
+                        </div> -->
                 </div>
 
-                <div class="form-group">
+                <div class="form-group mb-3">
                     <label for="Email">Email <span class="mandatory-star">*</span></label>
                     <input type="text" class="form-control form-input" id="Email" placeholder=""
                         formControlName="Email">
                     <!-- <div class="invalidFeedback"
-                        *ngIf="userFormFields.Email.errors && userFormFields.Email.errors.required && (userFormFields.Email.touched || userFormFields.Email.dirty)">
-                        This field is required
-                    </div> -->
+                            *ngIf="userFormFields.Email.errors && userFormFields.Email.errors.required && (userFormFields.Email.touched || userFormFields.Email.dirty)">
+                            This field is required
+                        </div> -->
                 </div>
-                <div class="col-12">
+                <div class="col-12 ">
                     <div class="row">
-                        <div class="col-6 form-group">
+                        <div class="col-6 form-group mb-3">
                             <label for="AccountName">Account Name <span class="mandatory-star">*</span></label>
                             <input type="text" class="form-control form-input" id="AccountName" placeholder=""
                                 formControlName="AccountName">
                             <!-- <div class="invalidFeedback"
-                                *ngIf="userFormFields.AccountName.errors && userFormFields.AccountName.errors.required && (userFormFields.AccountName.touched || userFormFields.AccountName.dirty)">
-                                This field is required
-                            </div> -->
+                                    *ngIf="userFormFields.AccountName.errors && userFormFields.AccountName.errors.required && (userFormFields.AccountName.touched || userFormFields.AccountName.dirty)">
+                                    This field is required
+                                </div> -->
                         </div>
-                        <div class="col-6 form-group">
+                        <div class="col-6 form-group mb-3">
                             <label for="Amount">Amount <span class="mandatory-star">*</span></label>
                             <input type="text" class="form-control form-input" id="Amount" placeholder=""
                                 formControlName="Amount">
                             <!-- <div class="invalidFeedback"
-                                *ngIf="userFormFields.Amount.errors && userFormFields.Amount.errors.required && (userFormFields.Amount.touched || userFormFields.Amount.dirty)">
-                                This field is required
-                            </div> -->
+                                    *ngIf="userFormFields.Amount.errors && userFormFields.Amount.errors.required && (userFormFields.Amount.touched || userFormFields.Amount.dirty)">
+                                    This field is required
+                                </div> -->
                         </div>
                     </div>
                 </div>
-                <div class="col-12">
+                <div class="col-12 mb-2">
                     *Espacio required
                 </div>
                 <div class="col-12">
@@ -74,10 +74,10 @@
                 </div>
             </div>
 
-            <div class="modal-footer">
+            <div class="modal-footer border-0">
                 <!-- <button type="button" class="btn btn-secondary" (click)="resetForm()">Cancel</button> -->
-                <button type="button" class="btn btn-primary" (click)="senddata()"
-                    [disabled]="userform.status === 'INVALID' || !enableCheckbox">Save</button>
+                <button type="button" class="btn theme-btn mx-auto" (click)="senddata()"
+                    [disabled]="userform.status === 'INVALID' || !enableCheckbox">SEND</button>
             </div>
         </form>
 

@@ -17,6 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { MatCardModule } from '@angular/material/card';
 import { MaterialModule } from './material.module';
 import { MakeANonOnlineDepositFormComponent } from './Dialog-boxes/make-a-non-online-deposit-form/make-a-non-online-deposit-form.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { MakeANonOnlineDepositFormComponent } from './Dialog-boxes/make-a-non-on
     // MatDialogModule,
     // MatCardModule,
     MaterialModule,
+    NgbModule
 
   ],
   providers: [],

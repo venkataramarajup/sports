@@ -8,14 +8,16 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./make-a-non-online-deposit-form.component.scss']
 })
 export class MakeANonOnlineDepositFormComponent implements OnInit {
-  userform: FormGroup;
-  enableCheckbox: any = false;
+  nononlineuserform: FormGroup;
+  nononlineenableCheckbox: any = false;
   showdropdownfield: boolean = false;
   paymentCards: any = [{ name: 'Fedex / Western Union / Money Gram' }, { name: 'Crypto Currency' }];
   selectedCardtype: any;
   cryptoValues: any;
   showcard: boolean = false;
   title: any;
+  deposit: any;
+
 
 
   constructor(@Inject(MAT_DIALOG_DATA) private data: any, private dialogRef: MatDialogRef<MakeANonOnlineDepositFormComponent>, private formbuilder: FormBuilder) {
@@ -29,11 +31,13 @@ export class MakeANonOnlineDepositFormComponent implements OnInit {
     if (this.data.title !== 'Make a Non Online Deposit') {
       this.title = this.data.title
       this.showdropdownfield = true;
-      this.paymentCards = [{ name: 'Fedex / Western Union / Money Gram' }, { name: 'Crypto Currency' }]
+      this.paymentCards = [{ name: 'Fedex / Western Union / Money Gram' }, { name: 'Crypto Currency' }];
+      this.deposit = 'Pay Out'
     } else {
       this.title = this.data.title
       this.paymentCards = [{ name: 'Visa / Master Card / AMEX' }, { name: 'Fedex / Western Union / Money Gram' }, { name: 'Crypto Currency' }]
       this.showdropdownfield = false;
+      this.deposit = 'Deposit'
     }
     this.buildform()
     // this.ownerForm = new FormGroup({
@@ -57,18 +61,18 @@ export class MakeANonOnlineDepositFormComponent implements OnInit {
       CVV: [''],
       ExpirationDate: ['']
     }
-    this.userform = this.formbuilder.group(obj)
+    this.nononlineuserform = this.formbuilder.group(obj)
   }
   get userFormFields() {
-    return this.userform.controls;
+    return this.nononlineuserform.controls;
   }
 
   sendformdata() {
-    console.log(this.userform)
+    console.log(this.nononlineuserform)
   }
 
   resetForm() {
-    this.userform.reset();
+    this.nononlineuserform.reset();
     this.showcard = false;
     this.cryptoValues = [];
   }
@@ -78,34 +82,34 @@ export class MakeANonOnlineDepositFormComponent implements OnInit {
   }
 
   fieldsChange(evt: any) {
-    this.enableCheckbox = evt.target.checked
+    this.nononlineenableCheckbox = evt.target.checked
     console.log(evt)
   }
   selectedvalue(val: any) {
     this.showcard = false;
     console.log(val)
     this.cryptoValues = [];
-    this.userform.controls['CardNumber'].clearValidators();
-    this.userform.controls['CardName'].clearValidators();
-    this.userform.controls['CVV'].clearValidators();
-    this.userform.controls['ExpirationDate'].clearValidators();
+    this.nononlineuserform.controls['CardNumber'].clearValidators();
+    this.nononlineuserform.controls['CardName'].clearValidators();
+    this.nononlineuserform.controls['CVV'].clearValidators();
+    this.nononlineuserform.controls['ExpirationDate'].clearValidators();
     if (val === 'Crypto Currency') {
       this.cryptoValues = [{ name: 'Bitcoin' }, { name: 'Etherium' }, { name: 'USDT' }, { name: 'USDC' }, { name: 'XRP' }, { name: 'Cardano' }, { name: 'Dogcoin' }, { name: 'Solana' }, { name: 'Litecoin' }, { name: 'Tron' },]
     } else if (val === 'Visa / Master Card / AMEX') {
       this.showcard = true;
       console.log('123')
       // this.userform.get('CardNumber').addValidators(Validators.required)
-      this.userform.controls['CardNumber'].setValidators([Validators.required])
-      this.userform.controls['CardNumber'].updateValueAndValidity();
+      this.nononlineuserform.controls['CardNumber'].setValidators([Validators.required])
+      this.nononlineuserform.controls['CardNumber'].updateValueAndValidity();
 
-      this.userform.controls['CardName'].setValidators([Validators.required])
-      this.userform.controls['CardName'].updateValueAndValidity();
+      this.nononlineuserform.controls['CardName'].setValidators([Validators.required])
+      this.nononlineuserform.controls['CardName'].updateValueAndValidity();
 
-      this.userform.controls['CVV'].setValidators([Validators.required])
-      this.userform.controls['CVV'].updateValueAndValidity();
+      this.nononlineuserform.controls['CVV'].setValidators([Validators.required])
+      this.nononlineuserform.controls['CVV'].updateValueAndValidity();
 
-      this.userform.controls['ExpirationDate'].setValidators([Validators.required])
-      this.userform.controls['ExpirationDate'].updateValueAndValidity();
+      this.nononlineuserform.controls['ExpirationDate'].setValidators([Validators.required])
+      this.nononlineuserform.controls['ExpirationDate'].updateValueAndValidity();
     }
   }
 
