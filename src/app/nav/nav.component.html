@@ -94,7 +94,7 @@
 <!-- Modal -->
 <div class="modal fade make-a-deposit" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-md">
+    <div class="modal-dialog modal-md">
         <div class="modal-content">
             <div class="modal-header">
                 <h3 class="modal-title fs-5" id="exampleModalLabel">{{title}}</h3>
@@ -139,7 +139,7 @@
                 </div>
                 <div class="col-12 onlinemethods py-4">
                     <div class="img">
-                        <img src="../../assets/images/cards.PNG" width="w-100">
+                        <img src="../../assets/images/cards.PNG" class="w-100">
                     </div>
                 </div>
             </div>
@@ -162,17 +162,17 @@
 
 <div class="modal fade make-a-deposit" id="exampleModal123" tabindex="-1" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-md">
+    <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <h3 class="modal-title fs-5" id="exampleModalLabel">{{title}}</h3>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" #closeBtn> <i
                         class="fa fa-close"></i> </button>
             </div>
-            <div class="modal-body text-center">
+           
                 <form [formGroup]="userform" class="dialog-form" (ngSubmit)="sendformdata()">
-                    <div class="modal-body">
-                        <div class="form-group">
+                    <div class="modal-body px-4">
+                        <div class="form-group mb-3">
                             <label for="firstname">First Name <span class="mandatory-star">*</span></label>
                             <input type="text" class="form-control form-input" id="firstname" placeholder=""
                                 formControlName="FirstName">
@@ -181,7 +181,7 @@
                                 This field is required
                             </div> -->
                         </div>
-                        <div class="form-group">
+                        <div class="form-group mb-3">
                             <label for="lastname">Last Name <span class="mandatory-star">*</span></label>
                             <input type="text" class="form-control form-input" id="Lastname" placeholder=""
                                 formControlName="LastName">
@@ -190,7 +190,7 @@
                                 This field is required
                             </div> -->
                         </div>
-                        <div class="form-group">
+                        <div class="form-group mb-3">
                             <label for="PhoneNumber">Phone Number <span class="mandatory-star">*</span></label>
                             <input type="text" class="form-control form-input" id="PhoneNumber" placeholder=""
                                 formControlName="PhoneNumber">
@@ -200,7 +200,7 @@
                             </div> -->
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group mb-3">
                             <label for="Email">Email <span class="mandatory-star">*</span></label>
                             <input type="text" class="form-control form-input" id="Email" placeholder=""
                                 formControlName="Email">
@@ -209,9 +209,9 @@
                                 This field is required
                             </div> -->
                         </div>
-                        <div class="col-12">
+                        <div class="col-12 ">
                             <div class="row">
-                                <div class="col-6 form-group">
+                                <div class="col-6 form-group mb-3">
                                     <label for="AccountName">Account Name <span class="mandatory-star">*</span></label>
                                     <input type="text" class="form-control form-input" id="AccountName" placeholder=""
                                         formControlName="AccountName">
@@ -220,7 +220,7 @@
                                         This field is required
                                     </div> -->
                                 </div>
-                                <div class="col-6 form-group">
+                                <div class="col-6 form-group mb-3">
                                     <label for="Amount">Amount <span class="mandatory-star">*</span></label>
                                     <input type="text" class="form-control form-input" id="Amount" placeholder=""
                                         formControlName="Amount">
@@ -231,7 +231,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12">
+                        <div class="col-12 mb-2">
                             *Espacio required
                         </div>
                         <div class="col-12">
@@ -241,14 +241,14 @@
                         </div>
                     </div>
 
-                    <div class="modal-footer">
+                    <div class="modal-footer border-0">
                         <!-- <button type="button" class="btn btn-secondary" (click)="resetForm()">Cancel</button> -->
-                        <button type="button" class="btn btn-primary" (click)="senddata()"
-                            [disabled]="userform.status === 'INVALID' || !enableCheckbox">Save</button>
+                        <button type="button" class="btn theme-btn mx-auto" (click)="senddata()"
+                            [disabled]="userform.status === 'INVALID' || !enableCheckbox">SEND</button>
                     </div>
                 </form>
 
-            </div>
+          
             <!-- <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary">Save changes</button>
@@ -260,17 +260,17 @@
 <!-- non online form -->
 <div class="modal fade make-a-deposit" id="nononlineuser" tabindex="-1" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-md">
+    <div class="modal-dialog modal-md">
         <div class="modal-content">
             <div class="modal-header">
                 <h3 class="modal-title fs-5" id="exampleModalLabel">Non Online</h3>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" #closeBtn> <i
                         class="fa fa-close"></i> </button>
             </div>
-            <div class="modal-body text-center">
+            <div class="modal-body ">
                 <form [formGroup]="nononlineuserform" class="dialog-form" (ngSubmit)="sendnononlineformdata()">
                     <div class="modal-body">
-                        <div class="form-group">
+                        <div class="form-group mb-3">
                             <label for="firstname">First Name <span class="mandatory-star">*</span></label>
                             <input type="text" class="form-control form-input" id="firstname" placeholder=""
                                 formControlName="FirstName">
@@ -279,7 +279,7 @@
                                 This field is required
                             </div> -->
                         </div>
-                        <div class="form-group">
+                        <div class="form-group mb-3">
                             <label for="lastname">Last Name <span class="mandatory-star">*</span></label>
                             <input type="text" class="form-control form-input" id="Lastname" placeholder=""
                                 formControlName="LastName">
@@ -288,7 +288,7 @@
                                 This field is required
                             </div> -->
                         </div>
-                        <div class="form-group">
+                        <div class="form-group mb-3">
                             <label for="PhoneNumber">Phone Number <span class="mandatory-star">*</span></label>
                             <input type="text" class="form-control form-input" id="PhoneNumber" placeholder=""
                                 formControlName="PhoneNumber">
@@ -297,7 +297,7 @@
                                 This field is required
                             </div> -->
                         </div>
-                        <div class="form-group">
+                        <div class="form-group mb-3">
                             <label for="Email">Email <span class="mandatory-star">*</span></label>
                             <input type="text" class="form-control form-input" id="Email" placeholder=""
                                 formControlName="Email">
@@ -306,7 +306,7 @@
                                 This field is required
                             </div> -->
                         </div>
-                        <div class="form-group">
+                        <div class="form-group mb-3">
                             <label for="Email">Email <span class="mandatory-star">*</span></label>
                             <input type="text" class="form-control form-input" id="Email" placeholder=""
                                 formControlName="Email">
@@ -315,7 +315,7 @@
                                 This field is required
                             </div> -->
                         </div>
-                        <div class="form-group">
+                        <div class="form-group mb-3">
                             <label for="AccountName">Account Name <span class="mandatory-star">*</span></label>
                             <input type="text" class="form-control form-input" id="AccountName" placeholder=""
                                 formControlName="AccountName">
@@ -327,7 +327,7 @@
                         <div class="col-12">
                             <div class="row">
 
-                                <div class="col-3 form-group">
+                                <div class="col-3 form-group  mb-3">
                                     <label for="Amount">Amount <span class="mandatory-star">*</span></label>
                                     <input type="text" class="form-control form-input" id="Amount" placeholder=""
                                         formControlName="Amount">
@@ -336,7 +336,7 @@
                                         This field is required
                                     </div> -->
                                 </div>
-                                <div class="col-9 form-group">
+                                <div class="col-9 form-group  mb-3">
                                     <label for="AccountName"><span class="mandatory-star"></span></label>
                                     <div class="select-group">
                                         <select id="PaymentType" class="form-control form-select"
@@ -359,10 +359,10 @@
                         </div>
                         <div class="col-12">
                             <div class="row">
-                                <div class="col-3">
-                                    *Espacio required
+                                <div class="col-3" >
+                                    <!-- *Espacio required -->
                                 </div>
-                                <div class="col-9">
+                                <div class="col-9  mb-3">
                                     <div *ngIf="cryptoValues?.length > 0">
                                         <div *ngFor="let cryptoname of cryptoValues" class="cryptocss">
                                             {{cryptoname.name}}
@@ -372,8 +372,15 @@
                             </div>
 
                         </div>
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-12  mb-3" >
+                                    *Espacio required
+                                </div>
+                            </div>
+                        </div>
                         <div *ngIf="showcard">
-                            <div class="form-group">
+                            <div class="form-group mb-3">
                                 <label for="CardNumber">CardNumber <span class="mandatory-star">*</span></label>
                                 <input type="text" class="form-control form-input" id="CardNumber" placeholder=""
                                     formControlName="CardNumber">
@@ -382,7 +389,7 @@
                                     This field is required
                                 </div> -->
                             </div>
-                            <div class="form-group">
+                            <div class="form-group mb-3">
                                 <label for="CardName">Card Name <span class="mandatory-star">*</span></label>
                                 <input type="text" class="form-control form-input" id="CardName" placeholder=""
                                     formControlName="CardName">
@@ -393,7 +400,7 @@
                             </div>
                             <div class="col-12">
                                 <div class="row">
-                                    <div class="col-6 form-group">
+                                    <div class="col-6 form-group mb-3">
                                         <label for="CVV">CVV <span class="mandatory-star">*</span></label>
                                         <input type="text" class="form-control form-input" id="CVV" placeholder=""
                                             formControlName="CVV">
@@ -402,7 +409,7 @@
                                             This field is required
                                         </div> -->
                                     </div>
-                                    <div class="col-6 form-group">
+                                    <div class="col-6 form-group mb-3">
                                         <label for="ExpirationDate">Expiration <span
                                                 class="mandatory-star">*</span></label>
                                         <input type="text" class="form-control form-input" id="ExpirationDate"
@@ -424,10 +431,10 @@
                         </div> -->
                     </div>
 
-                    <div class="modal-footer">
+                    <div class="modal-footer border-0">
                         <!-- <button type="button" class="btn btn-secondary" (click)="resetForm()">Cancel</button> -->
-                        <button type="button" class="btn btn-primary" (click)="sendnononlinedata()"
-                            [disabled]="nononlineuserform.status === 'INVALID'">Save</button>
+                        <button type="button" class="btn theme-btn mx-auto" (click)="sendnononlinedata()"
+                            [disabled]="nononlineuserform.status === 'INVALID'">SAVE</button>
                     </div>
                 </form>
 

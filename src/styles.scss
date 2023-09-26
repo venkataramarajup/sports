@@ -31,7 +31,10 @@ h5 {
 .uppercase {
   text-transform: uppercase;
 }
-
+.dropdown-menu a.dropdown-item:active {
+  background: #ff0000 !important;
+  color: #fff !important;
+}
 .m-width-100 {
   min-width: 100px;
 }
@@ -77,6 +80,9 @@ h5 {
 }
 
 .accordion-item {
+  .accordion-button{
+    text-transform: uppercase;
+  }
   .accordion-button:not(.collapsed) {
     color: #fff !important;
     background-color: #242020 !important;
@@ -84,22 +90,28 @@ h5 {
   }
 }
 
+.accordion-button:not(.collapsed)::after {
+  color: #ffffff;
+}
 .accordion-button::after {
   background-image: none !important;
-  content: "\f077" !important;
+  content: "\f078" !important;
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
   color: #000;
 }
-
-.accordion-button:not(.collapsed)::after {
-  background-image: none;
-  // content: "\f078";
-  // font-family: "Font Awesome 6 Free";
-  // font-weight: 900;
-  color: #fff !important;
+.curve:after {
+  background: url("assets/images/banners/lines.png");
+  content: "";
+  height: 80%;
+  width: 112px;
+  position: absolute;
+  left: 1%;
+  bottom: 0;
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-position: bottom;
 }
-
 .modal {
   .modal-dialog {
     .modal-content {
@@ -138,6 +150,7 @@ h5 {
       }
 
       .modal-body {
+        background-color: #F0F0F0;
         .card-sub-title {
           font-size: 30px;
           color: #000;
@@ -183,8 +196,15 @@ h5 {
           }
         }
       }
+      .modal-footer{
+        background-color: #F0F0F0;
+      }
     }
+  }
+  @media only screen and (min-width : 992px){
+     .modal-dialog.modal-md{
+      min-width: 600px !important;
+     }
   }
 }
 
-@media only screen and (max-width: 600px) {}
