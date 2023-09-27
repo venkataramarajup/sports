@@ -19,6 +19,8 @@ export class NavComponent implements OnInit {
   deposit: any;
   modalReferencedepositform: NgbModalRef;
   modalReferencenononlinedepositform: NgbModalRef;
+  depositSubmitform: NgbModalRef;
+  payoutSubmitform: NgbModalRef;
 
   // formDialogRef: MatDialogRef<MakeADepositComponent>;
   // payformDialogRef: MatDialogRef<MakeADepositFormComponent>;
@@ -178,9 +180,11 @@ export class NavComponent implements OnInit {
     this.enableCheckbox = evt.target.checked
     console.log(evt)
   }
-  senddata() {
+  senddata(content: any) {
     console.log('2123')
     console.log(this.userform)
+    this.depositSubmitform = this.modalService.open(content)
+    this.modalReferencedepositform.close();
   }
 
 
@@ -214,8 +218,10 @@ export class NavComponent implements OnInit {
     return this.nononlineuserform.controls;
   }
 
-  sendnononlineformdata() {
+  sendnononlineformdata(content: any) {
     console.log(this.nononlineuserform)
+    this.payoutSubmitform = this.modalService.open(content);
+    this.modalReferencenononlinedepositform.close()
   }
   resetForm() {
     this.userform.reset();
@@ -224,9 +230,11 @@ export class NavComponent implements OnInit {
     this.cryptoValues = [];
   }
 
-  sendnononlinedata() {
+  sendnononlinedata(content: any) {
     console.log('2123')
     console.log(this.nononlineuserform)
+    this.payoutSubmitform = this.modalService.open(content)
+    this.modalReferencenononlinedepositform.close()
   }
   nononlinefieldsChange(evt: any) {
     this.nononlineenableCheckbox = evt.target.checked

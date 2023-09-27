@@ -176,7 +176,7 @@
                 class="fa fa-close" (click)="closeform()"></i> </button>
     </div>
 
-    <form [formGroup]="userform" class="dialog-form" (ngSubmit)="senddata()">
+    <form [formGroup]="userform" class="dialog-form" (ngSubmit)="senddata(depositsubmit)">
         <div class="modal-body px-4">
             <div class="form-group mb-3">
                 <label for="firstname">First Name <span class="mandatory-star">*</span></label>
@@ -247,7 +247,7 @@
 
         <div class="modal-footer border-0">
             <!-- <button type="button" class="btn btn-secondary" (click)="resetForm()">Cancel</button> -->
-            <button type="button" class="btn theme-btn mx-auto" (click)="senddata()"
+            <button type="button" class="btn theme-btn mx-auto" (click)="senddata(depositsubmit)"
                 [disabled]="userform.status === 'INVALID' || !enableCheckbox">SEND</button>
         </div>
     </form>
@@ -275,7 +275,7 @@
             (click)="closenononlineform()"> <i class="fa fa-close"></i> </button>
     </div>
     <div class="modal-body ">
-        <form [formGroup]="nononlineuserform" class="dialog-form" (ngSubmit)="sendnononlineformdata()">
+        <form [formGroup]="nononlineuserform" class="dialog-form" (ngSubmit)="sendnononlineformdata(nononlinesubmit)">
             <div class="modal-body">
                 <div class="form-group mb-3">
                     <label for="firstname">First Name <span class="mandatory-star">*</span></label>
@@ -446,7 +446,7 @@
 
             <div class="modal-footer border-0">
                 <!-- <button type="button" class="btn btn-secondary" (click)="resetForm()">Cancel</button> -->
-                <button type="button" class="btn theme-btn mx-auto" (click)="sendnononlinedata()"
+                <button type="button" class="btn theme-btn mx-auto" (click)="sendnononlinedata(nononlinesubmit)"
                     [disabled]="nononlineuserform.status === 'INVALID'">SAVE</button>
             </div>
         </form>
@@ -459,4 +459,31 @@
     <!-- </div> -->
     <!-- </div> -->
     <!-- </div> -->
+</ng-template>
+<ng-template #depositsubmit>
+    <div class="modal-header">
+        <h3 class="modal-title fs-5" id="exampleModalLabel">Submitted Form</h3>
+        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" #closeBtn
+            (click)="closenononlineform()"> <i class="fa fa-close"></i> </button> -->
+    </div>
+    <div class="modal-body ">
+        You will recieve deposit information with in 5 to 10 minutes
+    </div>
+    <div class="modal-footer border-0">
+        ok
+    </div>
+</ng-template>
+<ng-template #nononlinesubmit>
+    <div class="modal-header">
+        <h3 class="modal-title fs-5" id="exampleModalLabel">Submitted Form</h3>
+        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" #closeBtn
+            (click)="closenononlineform()"> <i class="fa fa-close"></i> </button> -->
+    </div>
+    <div class="modal-body ">
+        The information has already been received, If all the information is correct and complies with all the terms and
+        conditions, the payment will be processed with 24-48 hours
+    </div>
+    <div class="modal-footer border-0">
+        ok
+    </div>
 </ng-template>
