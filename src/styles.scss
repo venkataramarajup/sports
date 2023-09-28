@@ -114,7 +114,12 @@ h5 {
 }
 .modal {
   .modal-dialog {
+    max-height: 100vh;
+    align-items: center;
+    display: flex;
     .modal-content {
+      border-radius: 8px;
+    overflow: hidden;
       .modal-header {
         display: flex;
         align-items: center;
@@ -151,6 +156,8 @@ h5 {
 
       .modal-body {
         background-color: #F0F0F0;
+        max-height: calc(100vh - 130px);
+        overflow: auto;
         .card-sub-title {
           font-size: 30px;
           color: #000;
@@ -208,3 +215,6 @@ h5 {
   }
 }
 
+.modal .modal-dialog .modal-content .dialog-form .modal-body {
+  max-height: calc(100vh - 204px) !important;
+}

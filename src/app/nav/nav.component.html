@@ -274,9 +274,9 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" #closeBtn
             (click)="closenononlineform()"> <i class="fa fa-close"></i> </button>
     </div>
-    <div class="modal-body ">
+    <!-- <div class="modal-body "> -->
         <form [formGroup]="nononlineuserform" class="dialog-form" (ngSubmit)="sendnononlineformdata(nononlinesubmit)">
-            <div class="modal-body">
+            <div class="modal-body px-5">
                 <div class="form-group mb-3">
                     <label for="firstname">First Name <span class="mandatory-star">*</span></label>
                     <input type="text" class="form-control form-input" id="firstname" placeholder=""
@@ -451,7 +451,7 @@
             </div>
         </form>
 
-    </div>
+    <!-- </div> -->
     <!-- <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary">Save changes</button>
