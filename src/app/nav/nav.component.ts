@@ -183,7 +183,7 @@ export class NavComponent implements OnInit {
   senddata(content: any) {
     console.log('2123')
     console.log(this.userform)
-    this.depositSubmitform = this.modalService.open(content)
+    this.depositSubmitform = this.modalService.open(content, { centered: true })
     this.modalReferencedepositform.close();
   }
 
@@ -220,7 +220,7 @@ export class NavComponent implements OnInit {
 
   sendnononlineformdata(content: any) {
     console.log(this.nononlineuserform)
-    this.payoutSubmitform = this.modalService.open(content);
+    this.payoutSubmitform = this.modalService.open(content, { centered: true });
     this.modalReferencenononlinedepositform.close()
   }
   resetForm() {
@@ -233,7 +233,7 @@ export class NavComponent implements OnInit {
   sendnononlinedata(content: any) {
     console.log('2123')
     console.log(this.nononlineuserform)
-    this.payoutSubmitform = this.modalService.open(content)
+    this.payoutSubmitform = this.modalService.open(content, { centered: true })
     this.modalReferencenononlinedepositform.close()
   }
   nononlinefieldsChange(evt: any) {
@@ -266,6 +266,16 @@ export class NavComponent implements OnInit {
       this.nononlineuserform.controls['ExpirationDate'].setValidators([Validators.required])
       this.nononlineuserform.controls['ExpirationDate'].updateValueAndValidity();
     }
+  }
+  closesuccesspopup(type: any) {
+    // 
+    if (type === 'deposit') {
+      this.depositSubmitform.close();
+    } else {
+      this.payoutSubmitform.close();
+    }
+
+
   }
 
 }
