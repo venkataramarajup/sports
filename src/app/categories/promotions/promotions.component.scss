@@ -60,6 +60,9 @@
     position: relative;
     margin-top: -65px;
     z-index: 9;
+    &:after{
+        display: none !important;
+    }
     img{
         width: 100%;
     }
