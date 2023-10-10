@@ -24,7 +24,7 @@
 
       <div id="p-slides" class="carousel carousel-dark slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="10000">
+          <div class="carousel-item active" data-bs-interval="3000">
             <div class="tiles">
               <div class="tile" (click)="selectedcategory('1')">
                 <img src="../../../assets/images/help/sports.jpg" width="w-100">
@@ -56,34 +56,34 @@
               </div>
             </div>
           </div>
-          <div class="carousel-item" data-bs-interval="2000">
+          <div class="carousel-item" data-bs-interval="3000">
             <div class="tiles">
               <div class="tile" (click)="selectedcategory('1')">
                 <img src="../../../assets/images/help/sports.jpg" width="w-100">
                 <div class="text">
                   <h4>Sports</h4>
-                  <i class="fa-solid fa-football"></i>
+                  <i class="icon-sports"></i>
                 </div>
               </div>
               <div class="tile" (click)="selectedcategory('1')">
                 <img src="../../../assets/images/help/casino.jpg" width="w-100">
                 <div class="text">
                   <h4>Casino</h4>
-                  <i class="fa-brands fa-bitcoin"></i>
+                  <i class="icon-casino"></i>
                 </div>
               </div>
               <div class="tile" (click)="selectedcategory('1')">
                 <img src="../../../assets/images/help/live-betting.jpg" width="w-100">
                 <div class="text">
                   <h4>Live Betting</h4>
-                  <i class="fa-regular fa-clock"></i>
+                  <i class="icon-live-betting"></i>
                 </div>
               </div>
               <div class="tile" (click)="selectedcategory('1')">
                 <img src="../../../assets/images/help/h-racing.jpg" width="w-100">
                 <div class="text">
                   <h4>Horse Racing</h4>
-                  <i class="fa-solid fa-horse"></i>
+                  <i class="icon-horse-racing"></i>
                 </div>
               </div>
             </div>
@@ -107,7 +107,7 @@
 
 <section class="accordian-sec mb-5">
   <div class="container">
-    <div class="accordion">
+    <div class="accordion" >
       <!-- *ngFor="let item of helptextArray |filter:searchText;let i = index" -->
       <!-- (click)="expand(i)" -->
       <div class="accordion-item" *ngFor="let item of helptextArray |filter:searchText;let i = index">
@@ -121,11 +121,7 @@
         <div id="collapse{{i}}" class="accordion-collapse collapse">
           <div class="accordion-body">
             {{item.solution}}
-            <!-- <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin
-            adds the appropriate classes that we use to style each element. These classes control the overall
-            appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
-            CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
-            <code>.accordion-body</code>, though the transition does limit overflow. -->
+            
           </div>
         </div>
       </div>
