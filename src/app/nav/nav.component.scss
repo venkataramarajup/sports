@@ -215,13 +215,19 @@
 .successpopup {
     background-color: #22720A !important;
     border-color: none;
-    .modal-body{
+
+    .modal-body {
         .fa-circle-check {
-            font-size: 4rem;
+            font-size: 4rem !important;
             color: #22720a;
         }
     }
-    
+
+}
+
+.fa-circle-check {
+    font-size: 4rem !important;
+    color: #22720a;
 }
 
 .successbordercolor {
