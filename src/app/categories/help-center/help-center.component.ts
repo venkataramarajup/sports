@@ -40,6 +40,7 @@ export class HelpCenterComponent implements OnInit {
   ngOnInit(): void {
     this.expandarray = Array(100).fill(false);
     this.expandarray[0] = true;
+    this.collapse = Array(100).fill(false);
   }
 
   selectedcategory(id: any) {
@@ -54,5 +55,14 @@ export class HelpCenterComponent implements OnInit {
       this.expandarray[i] = false;
     }
   }
+  collapse: any = Array(100).fill(false);
 
+  collapsethebar(i: any) {
+    if (this.collapse[i] === true) {
+      this.collapse[i] = false;
+    } else {
+      this.collapse[i] = true;
+    }
+
+  }
 }
