@@ -1,8 +1,8 @@
 :host{
     footer{
         background-color: #262626;
-        padding: 35px 0;
-        border-top: 10px solid #d3001a;
+        padding: 35px 0 35px 0;
+        border-top: 10px solid #ab0a1a;
         background-image: url(../../assets/images/imageFooter.png);
         background-repeat: no-repeat;
         background-size: 100%;
@@ -41,6 +41,20 @@
          
             }
           }
+        .brand-logo{
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: calc(100% + 10px);
+            padding: 10px 40px;
+            border-radius: 25px 25px 0 0;
+            background-color: #333;
+            margin: 0 auto;
+            width: 260px;
+            img{
+                width: 190px;
+            }
+        }
     }
     h3{
         text-transform: uppercase;
@@ -54,7 +68,8 @@
         font-size: 12px;
         line-height: 26px;
         &:hover{
-            text-decoration: underline;
+            // text-decoration: underline;
+            color: #ef3335 !important;
         }
     }
     p{

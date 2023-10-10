@@ -43,16 +43,22 @@
     img{
         width: 100%;
     }
+    &:after{
+        display: none !important;
+    }
 }
 .border-bottom{
     border-bottom: 1px solid #707070;
 }
 .white-box{
     .box{
+        margin: 20px 0 30px;
+        display: inline-block;
         h2{
-            color: #AB0A1A;
+            color: #393939;
             text-transform: capitalize;
             margin-bottom: 15px;
+            font-weight: 600;
         }
         border-radius: 34px;
         box-shadow: 0px 1px 6px rgba(0,0,0,0.3);

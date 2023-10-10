@@ -21,15 +21,18 @@
                 font-weight: 700;
 
                 .icon {
-                    width: 28px;
-                    height: 28px;
-                    border: 1px solid #3F3F3F;
+                    width: 34px;
+                    height: 34px;
+                    border: 2px solid #3F3F3F;
                     border-radius: 50%;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    margin: 0 auto 2px;
-
+                    margin: 0 auto 1px;
+                    i{
+                        font-size: 20px;
+                        // font-weight: bold;
+                    }
                     img {
                         width: 14px;
                     }

@@ -1,0 +1,137 @@
+@font-face {
+  font-family: 'allsports247';
+  src:  url('allsports247.eot?7pnn79');
+  src:  url('./allsports247.eot?7pnn79#iefix') format('embedded-opentype'),
+    url('./allsports247.ttf?7pnn79') format('truetype'),
+    url('./allsports247.woff?7pnn79') format('woff'),
+    url('./allsports247.svg?7pnn79#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'allsports247' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-casino:before {
+  content: "\e901";
+}
+.icon-refer-friend:before {
+  content: "\e904";
+}
+.icon-horse-racing:before {
+  content: "\e900";
+}
+.icon-sports:before {
+  content: "\e909";
+}
+.icon-live-betting:before {
+  content: "\e907";
+}
+.icon-phone:before {
+  content: "\e91e";
+}
+.icon-deal:before {
+  content: "\e928";
+}
+.icon-mail:before {
+  content: "\e923";
+}
+.icon-play:before {
+  content: "\e913";
+  color: #e50019;
+}
+.icon-insta:before {
+  content: "\e902";
+}
+.icon-facebook:before {
+  content: "\e910";
+}
+.icon-twitter:before {
+  content: "\e911";
+}
+.icon-check:before {
+  content: "\e914";
+  color: #36a315;
+}
+.icon-close:before {
+  content: "\e916";
+}
+.icon-search:before {
+  content: "\e91d";
+  color: #87878d;
+}
+.icon-arrow-right:before {
+  content: "\e915";
+  color: #707071;
+}
+.icon-arrrow_up:before {
+  content: "\e903";
+  color: #707071;
+}
+.icon-arrow-down:before {
+  content: "\e905";
+  color: #707071;
+}
+.icon-arrow_left:before {
+  content: "\e906";
+  color: #707071;
+}
+.icon-master-card .path1:before {
+  content: "\e933";
+  color: rgb(229, 0, 25);
+}
+.icon-master-card .path2:before {
+  content: "\e934";
+  margin-left: -1.6181640625em;
+  color: rgb(171, 10, 26);
+}
+.icon-master-card .path3:before {
+  content: "\e935";
+  margin-left: -1.6181640625em;
+  color: rgb(211, 0, 26);
+}
+.icon-veno_logo:before {
+  content: "\e90b";
+}
+.icon-logos:before {
+  content: "\e90c";
+}
+.icon-zelle:before {
+  content: "\e90d";
+}
+.icon-paypal:before {
+  content: "\e90e";
+}
+.icon-cashapp_red_logo:before {
+  content: "\e92d";
+  color: #d3001a;
+}
+.icon-fedex:before {
+  content: "\e92e";
+  color: #d3001a;
+}
+.icon-visa:before {
+  content: "\e92f";
+  color: #d3001a;
+}
+.icon-western-union:before {
+  content: "\e931";
+  color: #d3001a;
+}
+.icon-bitcoin:before {
+  content: "\e936";
+  color: #d3001a;
+}

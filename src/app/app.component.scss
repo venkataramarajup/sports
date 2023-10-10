@@ -1,7 +1,7 @@
 .chat-window{
     .chat-btn{
-        width: 70px;
-        height: 70px;
+        width: 80px;
+        height: 80px;
         border-radius: 50%;
         background-color: #E50019;
         display: flex;
@@ -16,6 +16,10 @@
         font-size: 13px;
         z-index: 9999;
         font-weight: 600;
+        i{
+            font-size: 34px;
+            margin-bottom: 5px;
+        }
         img{
             width: 22px;
             margin-bottom: 5px;
