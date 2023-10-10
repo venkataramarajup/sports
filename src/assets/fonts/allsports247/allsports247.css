@@ -103,7 +103,7 @@
   margin-left: -1.6181640625em;
   color: rgb(211, 0, 26);
 }
-.icon-veno_logo:before {
+.icon-venmo:before {
   content: "\e90b";
 }
 .icon-logos:before {
@@ -115,7 +115,7 @@
 .icon-paypal:before {
   content: "\e90e";
 }
-.icon-cashapp_red_logo:before {
+.icon-cashapp:before {
   content: "\e92d";
   color: #d3001a;
 }
