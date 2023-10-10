@@ -16,6 +16,9 @@ import { PrivacyAndPolicyComponent } from './privacy-and-policy/privacy-and-poli
 import { HelpCenterCategoryComponent } from './help-center-category/help-center-category.component';
 import { PayoutPoliciesComponent } from './payout-policies/payout-policies.component';
 import { DepositPoliciesComponent } from './deposit-policies/deposit-policies.component';
+import { RollOverRulesComponent } from './roll-over-rules/roll-over-rules.component';
+import { LiveBettingRulesComponent } from './live-betting-rules/live-betting-rules.component';
+import { RacebookRulesComponent } from './racebook-rules/racebook-rules.component';
 
 const routes: Routes = [
   {
@@ -86,6 +89,18 @@ const routes: Routes = [
   {
     path: 'DepositPolicie',
     component: DepositPoliciesComponent
+  },
+  {
+    path: 'RollOverRules',
+    component: RollOverRulesComponent
+  },
+  {
+    path: 'LiveBettingRules',
+    component: LiveBettingRulesComponent
+  },
+  {
+    path: 'RaceBookRules',
+    component: RacebookRulesComponent
   },
 ];
 

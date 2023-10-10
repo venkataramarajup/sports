@@ -20,6 +20,9 @@ import { DepositPoliciesComponent } from './deposit-policies/deposit-policies.co
 import { PayoutPoliciesComponent } from './payout-policies/payout-policies.component';
 import { FormsModule } from '@angular/forms';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { RacebookRulesComponent } from './racebook-rules/racebook-rules.component';
+import { LiveBettingRulesComponent } from './live-betting-rules/live-betting-rules.component';
+import { RollOverRulesComponent } from './roll-over-rules/roll-over-rules.component';
 
 
 @NgModule({
@@ -39,7 +42,10 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     PrivacyAndPolicyComponent,
     HelpCenterCategoryComponent,
     DepositPoliciesComponent,
-    PayoutPoliciesComponent
+    PayoutPoliciesComponent,
+    RacebookRulesComponent,
+    LiveBettingRulesComponent,
+    RollOverRulesComponent
   ],
   imports: [
     CommonModule,
