@@ -23,6 +23,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { RacebookRulesComponent } from './racebook-rules/racebook-rules.component';
 import { LiveBettingRulesComponent } from './live-betting-rules/live-betting-rules.component';
 import { RollOverRulesComponent } from './roll-over-rules/roll-over-rules.component';
+import { MarketingComponent } from './marketing/marketing.component';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { RollOverRulesComponent } from './roll-over-rules/roll-over-rules.compon
     PayoutPoliciesComponent,
     RacebookRulesComponent,
     LiveBettingRulesComponent,
-    RollOverRulesComponent
+    RollOverRulesComponent,
+    MarketingComponent
   ],
   imports: [
     CommonModule,

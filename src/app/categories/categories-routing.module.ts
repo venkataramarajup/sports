@@ -19,6 +19,7 @@ import { DepositPoliciesComponent } from './deposit-policies/deposit-policies.co
 import { RollOverRulesComponent } from './roll-over-rules/roll-over-rules.component';
 import { LiveBettingRulesComponent } from './live-betting-rules/live-betting-rules.component';
 import { RacebookRulesComponent } from './racebook-rules/racebook-rules.component';
+import { MarketingComponent } from './marketing/marketing.component';
 
 const routes: Routes = [
   {
@@ -102,6 +103,10 @@ const routes: Routes = [
     path: 'RaceBookRules',
     component: RacebookRulesComponent
   },
+  {
+    path:'Marketing',
+    component: MarketingComponent
+  }
 ];
 
 @NgModule({

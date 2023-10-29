@@ -45,6 +45,9 @@
         }
     }
 }
+// .img-hor {
+//     transform: rotateY(180deg);
+//   }
 .curve{
     width: 100%;
     position: relative;
@@ -107,4 +110,9 @@
         }
     }
   
+}
+.container {
+    p {
+        padding-left: 20px;
+    }
 }

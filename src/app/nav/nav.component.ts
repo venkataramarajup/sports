@@ -5,6 +5,7 @@ import { MakeADepositComponent } from '../Dialog-boxes/make-a-deposit/make-a-dep
 import { MakeANonOnlineDepositFormComponent } from '../Dialog-boxes/make-a-non-online-deposit-form/make-a-non-online-deposit-form.component';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { NgbModal, NgbModalOptions, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -25,7 +26,7 @@ export class NavComponent implements OnInit {
   // formDialogRef: MatDialogRef<MakeADepositComponent>;
   // payformDialogRef: MatDialogRef<MakeADepositFormComponent>;
 
-  constructor(private dialog: MatDialog, private formbuilder: FormBuilder, private modalService: NgbModal) { }
+  constructor(private dialog: MatDialog, private formbuilder: FormBuilder, private modalService: NgbModal, private router: Router) { }
 
   ngOnInit(): void {
     // this.openform()
@@ -87,6 +88,7 @@ export class NavComponent implements OnInit {
     this.nononlineenableCheckbox = false;
   }
 
+  selectedbtnName: any;
   /* check the online deposit / payout out form buttons */
   buttonclicked(title: any, btnname: any, templateref: any) {
     let ngbModalOptions: NgbModalOptions = {
@@ -94,6 +96,7 @@ export class NavComponent implements OnInit {
       keyboard: false
     }
     console.log(title, btnname)
+    this.selectedbtnName = btnname;
     if (btnname === 'cashapp' || btnname === 'paypal' || btnname === 'zelle' || btnname === 'venmo') {
       if (title === 'Make a Deposit') {
         // this.openform('Make an Online Deposit');
@@ -126,6 +129,10 @@ export class NavComponent implements OnInit {
     this.closeModal();
 
 
+  }
+  marketingroute(){
+    this.modalReferencedepositform.close();
+    this.router.navigate(['./Marketing']);
   }
 
   closeModal(): void {

@@ -1,3 +1,6 @@
+.modal {
+    padding-right: 0px !important;
+}
 :host {
     flex-wrap: wrap;
     padding: 0;
@@ -282,6 +285,11 @@
 .successbordercolor {
     border-color: #22720A !important
 }
+.marketing {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 
 // .showModal {
 //     display: block;
