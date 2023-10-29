@@ -16,7 +16,7 @@
             max-width: 100%;
             h5{
                 font-size: 50px;
-                font-weight: 800;
+                font-weight: 700;
                 text-transform: uppercase;
                 text-shadow: 0 0 10px rgba(0,0,0,1);
                 // span{
@@ -40,6 +40,12 @@
                 text-decoration: underline;
               }
             }
+        }
+        .carousel-item{
+            max-height: calc(100vh - 250px);
+            overflow: hidden;
+            display: flex;
+            align-items: end;
         }
     }
     .carousel-indicators{

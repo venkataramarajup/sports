@@ -20,8 +20,22 @@ h3,
 h4,
 h5 {
   font-weight: 700;
-  text-transform: uppercase;
-  color: #393939;
+  // text-transform: uppercase;
+  color: #3F3F3F;
+}
+.h1{
+  font-size: 45px !important;
+  color: #AB0A1A !important;
+  text-transform: uppercase !important;
+  font-weight: 700 !important;
+  margin-bottom: 40px !important;
+}
+.h2{
+  font-size: 25px !important;
+  color: #AB0A1A !important;
+  font-weight: 700 !important;
+  margin-top: 30px !important;
+  margin-bottom: 15px !important;
 }
 
 .p-title {
@@ -108,7 +122,8 @@ span.mandatory-star {
   background: url("assets/images/banners/lines.png");
   content: "";
   height: 80%;
-  width: 112px;
+  background-size: 100%;
+  width: 81px;
   position: absolute;
   left: 1%;
   bottom: 0;

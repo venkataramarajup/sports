@@ -5,40 +5,30 @@
     .carousel-inner{
         .carousel-caption {
             padding: 40px 60px;
-            // left: 0;
+            left: 0;
             top: 0;
             bottom: 0;
             margin: auto 0;
             display: flex !important;
             flex-direction: column;
-            text-align: center;
+            text-align: left;
             justify-content: center;
-            max-width: 100%;
+            max-width: 60%;
             h5{
                 font-size: 50px;
-                font-weight: 800;
-                text-transform: uppercase;
-                span{
-                    color: #E50019;
-                }
-            }
-            .btn{
-                background-color: #ff0000;
-                border-color: #ff0000;
-                color: #fff;
-                border-radius: 20px;
-                padding: 8px 30px;
-                margin: 30px auto 15px;
-                text-transform: uppercase;
                 font-weight: 700;
+                text-transform: uppercase;
+                color: #fff;
             }
-            a{
-              color:#fff !important;
-              text-decoration: none;
-              &:hover{
-                text-decoration: underline;
-              }
+            h3{
+                color: #fff;
             }
+        }
+        .carousel-item{
+            max-height: calc(100vh - 250px);
+            overflow: hidden;
+            display: flex;
+            align-items: end;
         }
     }
     .carousel-indicators{
@@ -55,18 +45,57 @@
         }
     }
 }
-.curve{
+.curve {
     width: 100%;
     position: relative;
     margin-top: -65px;
     z-index: 9;
-    &:after{
-        display: none !important;
+   .h1-container{
+    h1{
+        text-transform: capitalize !important;
+        font-weight: 700 !important;
+        color: #fff;
+        span{
+            display: block;
+            font-size: 21px;
+            text-transform: initial;
+            font-weight: 700;
+            color: #fff;
+        }
     }
-    img{
+   }
+    img {
         width: 100%;
     }
+    &:after{
+        display: none;
+    }
 }
+
+.title {
+    .h1-container {
+        text-transform: uppercase;
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        display: flex;
+        align-items: end;
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #fff;
+        }
+    }
+}
+
+.gray-sec{
+    background-color: #F0F0F0;
+}
+
 
 .steps-sec{
     position: relative;
@@ -139,22 +168,39 @@
  }
 }
 
-.content-sec{
+.main-content{
     border-top: 1px solid #eaeaea;
     padding-top: 25px;
     .heading{
         display: flex;
         align-items: center;
         h2{
-            color: #393939;
-            font-size: 80px;
+            color: #ab0a1a;
+            font-size: 70px;
             font-weight: 700;
             text-transform: uppercase;
             text-align: center;
         }
     }
+    p{
+        strong{
+            font-weight: bold;
+        }
+        a{
+            color: #AB0A1A !important;
+            font-weight: bold;
+            text-decoration: underline;
+            &:hover{
+                text-decoration: none;
+            }
+          }
+    }
+    ul{
+        li{
+            line-height: 40px;
+        }
+    }
 }
-
 .bonus-sec{
     border-top: 1px solid #eaeaea;
     padding-top: 25px;
@@ -209,5 +255,31 @@
         //     border: 2px solid #ffefef;
         //     position: absolute;
         // }
+    }
+}
+
+
+.flyer{
+    margin: 50px 0 60px;
+    display: inline-block;
+    width: 100%;
+    .strip{
+        background-color: #E2E2E2;
+        border-radius: 100px 0 100px 0;
+        padding: 20px;
+        position: relative;
+        // box-shadow: 0 3px 6px rgba(0,0,0, 0.16) inset 0 3px 6px rgba(0,0,0, 0.16);
+        img{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 160px;
+        }
+        .text{
+            p{
+                font-size: 26px;
+                margin: 0;
+            }
+        }
     }
 }
