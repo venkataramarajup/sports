@@ -46,6 +46,11 @@
                 img{
                     display: none;
                 }
+                i{
+                    font-size: 22px;
+                    margin-right: 5px;
+                    vertical-align: middle;
+                }
             }
         }
     }
@@ -71,10 +76,25 @@
         .btns{        
           .btn{
             width: auto;
-            padding: 5px 10px;
+            min-width: fit-content !important;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            color: #fff;
+            border: 0;
             img{
                 width: 20px !important;
                 display: inline-block;
+            }
+            i{
+                font-size: 24px;
+                margin-right: 0px;
+                vertical-align: middle;
+            }
+            span{
+                display: none;
             }
             &.login{
                

@@ -25,6 +25,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-arrow-right-long:before {
+  content: "\e90f";
+}
+.icon-login:before {
+  content: "\e908";
+}
+.icon-add-user:before {
+  content: "\e90a";
+}
 .icon-casino:before {
   content: "\e901";
 }

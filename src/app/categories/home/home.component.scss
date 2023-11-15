@@ -38,7 +38,7 @@
             justify-content: center;
             max-width: 50%;
             h5 {
-                font-size: 50px;
+                font-size: 45px;
                 font-weight: 700;
                 text-transform: uppercase;
             }
@@ -71,7 +71,7 @@
 .curve {
     width: 100%;
     position: relative;
-    margin-top: -65px;
+    margin-top: -64px;
     z-index: 9;
 
     &:after {
@@ -160,7 +160,7 @@
                 }
 
                 .btn {
-                    // background-color: #ff0000;
+                    // background-color: #e50019;
                     // color: #fff;
                     // border-radius: 20px;
                     // padding: 5px 15px;
@@ -347,7 +347,7 @@
     }
 }
 
-.main-content{
+.main-content mb-5{
     p{
         strong{
             font-weight: bold;
@@ -416,6 +416,67 @@
     .text{
         p{
 
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    // .home-banner{
+    //     .carousel-indicators{
+    //         display: none;
+    //     }
+    //     .carousel-inner {
+    //         .carousel-caption {
+    //             max-width: 100%;
+    //             h5 {
+    //                 font-size: 20px;
+    //                 font-weight: 700;
+    //                 text-transform: uppercase;
+    //             }
+    //             h3{
+    //                 font-size:16px;
+    //             }
+    //             .btn{
+    //                 display: none;
+    //             }
+    //         }
+    //     }
+    // }
+    .curve {
+        margin-top: -18px !important;
+        img{
+           display: block !important;
+        }
+    }
+
+    .promos {
+        margin-top: 20px;
+        .box{
+            h2{
+                text-align: center;
+            }
+        }
+        .tiles1 {
+            .tile {
+                .details {
+                   
+                    align-items: center;
+                    // flex-direction: column;
+                    justify-content: space-between;
+                    .btn{
+                        margin-top: 5px;
+                    }
+                }
+            }
+        }
+        .tiles2 {
+            .tile {
+                padding-top: initial;
+                img{
+                    position: relative;
+                    width: 100%;
+                }
+            }
         }
     }
 }

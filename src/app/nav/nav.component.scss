@@ -48,7 +48,7 @@
                     left: 0;
                     right: 0;
                     margin: auto;
-                    background: #ff0000;
+                    background: #e50019;
                     z-index: 9;
                 }
 
@@ -59,7 +59,7 @@
                     }
 
                     &:after {
-                        width: 100%;
+                        width: 100% !important;
                     }
                 }
             }
@@ -123,7 +123,9 @@
 
         ul.dropdown-menu {
             border-radius: 15px;
-
+            left: 0 !important;
+   
+            right: auto;
             li {
                 a {
                     font-size: 12px;
@@ -131,6 +133,7 @@
                     text-transform: uppercase;
                     border-bottom: 1px solid #eaeaea;
                     padding: 12px 20px;
+                    color: #000 !important;
                     &:hover, &:active{
                         color: #AB0A1A !important;
                         background-color: transparent;
@@ -150,19 +153,59 @@
     @media only screen and (max-width: 600px) {
         nav {
             flex-direction: row-reverse;
-
+            padding: 0 !important;
+            .navbar-collapse {
+                border-top: 1px solid #aaa;
+                background: #3f3f3f;
+                padding: 10px 0;
+            }
             .navbar-toggler {
                 border: 0;
-
+                margin: 10px;
                 &:focus {
                     border: 0;
                     box-shadow: none;
+                }
+            }
+            li{
+                a{
+                    display: flex;
+                    color: #fff !important;
+                    padding: 10px 0;
+                    align-items: center;
+                    font-weight: 500 !important;
+                    font-size: 15px !important;
+                    &:after{
+                        right: auto !important;
+                        width: 0 !important;
+                    }
+                    span{
+                        margin:0px 10px 0px 0px !important;
+                        border-color: #fff;
+                        background-color: #fff;
+                       
+                    }
+                    i{
+                        color: #000 !important;
+                    }
+                    &:hover{
+                       span{
+                        background-color: #ed3335 !important;
+                        border-color: #ed3335 !important;
+                        i{
+                            color: #fff !important;
+                        }
+                       }
+                    }
                 }
             }
         }
 
         .banking-dropdown {
             margin-left: 0 !important;
+            position: absolute;
+            left: 15px;
+            top: 9px;
         }
     }
 

@@ -14,7 +14,7 @@
             justify-content: center;
             max-width: 60%;
             h5 {
-                font-size: 50px;
+                font-size: 45px;
                 font-weight: 700;
                 text-transform: uppercase;
             }
@@ -71,7 +71,7 @@
         align-items: end;
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 40px;
             font-weight: 800;
             color: #fff;
         }
@@ -156,4 +156,20 @@
             }
         }
     }
+}
+
+@media only screen and (max-width: 600px) {
+    .sports-sec .row.res-order {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .sports-sec .row.res-order{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .sports-sec .row{
+        border-bottom: 1px solid #aaa;
+    margin-bottom: 50px !important;
+    }
+  
 }
