@@ -40,7 +40,9 @@ h5 {
   margin-top: 30px !important;
   margin-bottom: 15px !important;
 }
-
+.hide-desk-show-resp{
+display: none !important;
+}
 .p-title {
   color: #AB0A1A;
 }
@@ -406,7 +408,8 @@ span.mandatory-star {
   }
 
 }
-@media only screen and (min-width: 820px) {
+@media only screen and (max-width: 900px) {
+
   footer{ 
     text-align: center;
   }
@@ -487,7 +490,20 @@ span.mandatory-star {
 
 }
 @media only screen and (max-width: 600px) {
-  
+  .hide-desk-show-resp{
+    display: flex !important;
+    }
+    nav .navbar-collapse{
+      ul{
+        border-bottom: 1px solid #aaa;
+        margin-bottom: 15px !important;
+      }
+      .help{
+        margin: 5px auto;
+        display: flex;
+        border-radius: 30px;
+      }
+    }
   .h1 {
     font-size: 33px !important;
 }
