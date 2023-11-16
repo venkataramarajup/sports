@@ -154,3 +154,42 @@
     margin-left: auto;
     width: auto;
 }
+
+@media only screen and (max-width: 900px) {
+
+        .product-slides {
+            .carousel {
+                .carousel-inner {
+                    .tiles {
+                        display: flex;
+                        justify-content: space-evenly;
+                        flex-wrap: wrap;
+                        gap: 15px;
+                        .tile {
+                            width: inherit;
+                            height: auto;
+                            margin: 0;
+                            margin-bottom: 20px !important;
+                            min-width:calc(50% - 10px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: 600px) {
+
+        .product-slides {
+            .carousel {
+                .carousel-inner {
+                    .tiles {
+                                    gap: 0;    
+                        .tile {
+                            width: 100%;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }

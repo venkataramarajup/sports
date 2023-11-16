@@ -7,13 +7,13 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { NgbModal, NgbModalOptions, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
+
   @ViewChild('closeBtn') closeBtn: ElementRef;
   @ViewChild('myModal') myModal: any;
   userform: FormGroup;
@@ -27,6 +27,9 @@ export class NavComponent implements OnInit {
   // payformDialogRef: MatDialogRef<MakeADepositFormComponent>;
 
   constructor(private dialog: MatDialog, private formbuilder: FormBuilder, private modalService: NgbModal, private router: Router) { }
+  redirectToHelpCenter() {
+    this.router.navigate(['./HelpCenter'])
+  }
 
   ngOnInit(): void {
     // this.openform()

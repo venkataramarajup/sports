@@ -9,6 +9,7 @@
         .logo{
             display: flex;
             align-items: center;
+            cursor: pointer;
             img{
                 padding: 5px;
             }
@@ -51,7 +52,18 @@
     }
   
 }
-
+@media only screen and (max-width: 1200px) {
+    :host{
+        padding: 15px 10px !important;
+        .h-right-sec .btns .btn {
+            padding: 7px 10px !important;
+           }
+    }
+    }
+@media only screen and (max-width: 900px) {
+    :host{
+        padding: 15px 15px;
+        .h-left-sec{
 
 @media only screen and (max-width: 600px) {
   :host{
