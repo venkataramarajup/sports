@@ -91,7 +91,6 @@ export class NavComponent implements OnInit {
     this.nononlineenableCheckbox = false;
   }
 
-  selectedbtnName: any;
   /* check the online deposit / payout out form buttons */
   buttonclicked(title: any, btnname: any, templateref: any) {
     let ngbModalOptions: NgbModalOptions = {
@@ -99,7 +98,6 @@ export class NavComponent implements OnInit {
       keyboard: false
     }
     console.log(title, btnname)
-    this.selectedbtnName = btnname;
     if (btnname === 'cashapp' || btnname === 'paypal' || btnname === 'zelle' || btnname === 'venmo') {
       if (title === 'Make a Deposit') {
         // this.openform('Make an Online Deposit');
@@ -132,10 +130,6 @@ export class NavComponent implements OnInit {
     this.closeModal();
 
 
-  }
-  marketingroute(){
-    this.modalReferencedepositform.close();
-    this.router.navigate(['./Marketing']);
   }
 
   closeModal(): void {

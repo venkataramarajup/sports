@@ -47,6 +47,11 @@
                 img{
                     display: none;
                 }
+                i{
+                    font-size: 22px;
+                    margin-right: 5px;
+                    vertical-align: middle;
+                }
             }
         }
     }
@@ -65,6 +70,42 @@
         padding: 15px 15px;
         .h-left-sec{
 
+            .logo{
+                img{
+                    height: 35px !important;
+                }
+            }
+        }
+        .h-right-sec{
+            // .contact{
+            //     display: none;
+            // }
+            .btns{        
+                .btn{
+                    width: auto;                  
+                    min-width: fit-content !important;
+                    padding: 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: transparent;
+                    color: #fff;
+                    border: 0;
+                    span{
+                        display: none;
+                    }
+                }
+                .btn.help{
+                   background-color: #fff;
+                   color: #000;
+                   padding: 5px 10px !important;
+                }
+            }
+        }
+       
+    }
+ 
+}
 @media only screen and (max-width: 600px) {
   :host{
     padding: 15px;
@@ -72,7 +113,7 @@
 
         .logo{
             img{
-                height: 28px;
+                height: 28px !important;
             }
         }
     }
@@ -83,10 +124,25 @@
         .btns{        
           .btn{
             width: auto;
-            padding: 5px 10px;
+            min-width: fit-content !important;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            color: #fff;
+            border: 0;
             img{
                 width: 20px !important;
                 display: inline-block;
+            }
+            i{
+                font-size: 24px;
+                margin-right: 0px;
+                vertical-align: middle;
+            }
+            span{
+                display: none;
             }
             &.login{
                
