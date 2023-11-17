@@ -19,6 +19,12 @@
                 text-transform: uppercase;
             }
         }
+        .carousel-item{
+            max-height: calc(100vh - 250px);
+            overflow: hidden;
+            display: flex;
+            align-items: end;
+        }
     }
 
     .carousel-indicators {
@@ -168,8 +174,8 @@
         flex-direction: column-reverse;
     }
     .sports-sec .row{
-        border-bottom: 1px solid #aaa;
-    margin-bottom: 50px !important;
+    //     border-bottom: 1px solid #aaa;
+    // margin-bottom: 50px !important;
     }
   
 }

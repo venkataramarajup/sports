@@ -391,7 +391,9 @@
         border-radius: 100px 0 100px 0;
         padding: 20px;
         position: relative;
-
+         .btn {
+            white-space: nowrap;
+        }
         // box-shadow: 0 3px 6px rgba(0,0,0, 0.16) inset 0 3px 6px rgba(0,0,0, 0.16);
         img {
             position: absolute;
@@ -432,14 +434,14 @@
     }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 991px) {
     .curve {
       margin-top: -30px !important;
 
     }
     
             .promos{
-             &>.row > div:first-child{
+             &>.row .sports-col{
                 flex: 0 0 100%;
                 padding: 0 !important;
                 }
@@ -465,10 +467,17 @@
                 }
                 .col-sm-12.col-md-4 {
                     width: 50%;
+                 
+                }
+                .promos-col{
+                    margin: auto;
                 }
             }
 }
 @media only screen and (max-width: 600px) {
+    .main-content{
+        margin-bottom: 0 !important;
+    }
     // .home-banner{
     //     .carousel-indicators{
     //         display: none;
@@ -530,6 +539,14 @@
         }
         .col-sm-12.col-md-4{
             width: 100% !important;
+        }
+        .row .sports-col {
+            padding-right: 1.5rem!important;
+            padding-left: 1.5rem!important;
+        }
+        .promo {
+            max-width: 70%;
+            margin: auto;
         }
     }
 }

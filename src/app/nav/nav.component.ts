@@ -27,9 +27,6 @@ export class NavComponent implements OnInit {
   // payformDialogRef: MatDialogRef<MakeADepositFormComponent>;
 
   constructor(private dialog: MatDialog, private formbuilder: FormBuilder, private modalService: NgbModal, private router: Router) { }
-  redirectToHelpCenter() {
-    this.router.navigate(['./HelpCenter'])
-  }
 
   ngOnInit(): void {
     // this.openform()

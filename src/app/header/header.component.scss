@@ -58,6 +58,7 @@
   
 }
 @media only screen and (max-width: 1200px) {
+    
     :host{
         padding: 15px 10px !important;
         .h-right-sec .btns .btn {
@@ -65,7 +66,7 @@
            }
     }
     }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 991px) {
     :host{
         padding: 15px 15px;
         .h-left-sec{
@@ -106,7 +107,7 @@
     }
  
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 767px) {
   :host{
     padding: 15px;
     .h-left-sec{
@@ -118,9 +119,9 @@
         }
     }
     .h-right-sec{
-        .contact{
-            display: none;
-        }
+        // .contact{
+        //     display: none;
+        // }
         .btns{        
           .btn{
             width: auto;
@@ -132,6 +133,7 @@
             background: transparent;
             color: #fff;
             border: 0;
+            order: 2;
             img{
                 width: 20px !important;
                 display: inline-block;
@@ -159,11 +161,23 @@
                 }
             }
             &.help{
-                display: none;
+                // display: none;
+                order: 1;
+                font-size: 14px;
+                margin-right: 10px;
             }
           }
         }
     }
   }
 
+}
+@media only screen and (max-width: 600px) {
+:host{
+    .h-right-sec{
+        .contact{
+            display: none;
+        }
+    }
+}
 }

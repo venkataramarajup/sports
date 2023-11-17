@@ -126,7 +126,7 @@ span.mandatory-star {
 .curve:after {
   background: url("assets/images/banners/lines.png");
   content: "";
-  height: 80%;
+  height: calc(100% - 40px) !important;
   background-size: 100%;
   width: 81px;
   position: absolute;
@@ -410,11 +410,16 @@ span.mandatory-star {
 }
 
 @media only screen and (max-width: 1200px) {
+  .home-banner .carousel-inner .carousel-caption h5 {
+    font-size: 35px !important;
+}
   .curve {
-    margin-top: -45px !important;
-  
+    margin-top: -41px !important;
+    &::after{
+      display: none !important;
+    }
       .h1-container{
-        padding-left: 90px;
+        padding-left: 0px;
         h1 {
           font-size: 25px !important;
           span{
@@ -425,7 +430,7 @@ span.mandatory-star {
     
   }
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 991px) {
 
   footer{ 
     text-align: center;
@@ -468,6 +473,7 @@ span.mandatory-star {
   .carousel-inner {
       .carousel-caption {
           max-width: 100% !important;
+          right: 0;
           h5 {
               font-size: 20px !important;
           }
@@ -481,11 +487,12 @@ span.mandatory-star {
   }
 }
   .curve {
-    margin-top: -20px !important;
-    &:after{
-      height: 100% !important;
-      width: 58px !important;
-    }
+    margin-top: -60px !important;
+    // &:after{
+    //   height: 100% !important;
+    //   width: 58px !important;
+    //   display: none !important;
+    // }
     // img{
     //     display: none !important;
     // }
@@ -493,7 +500,7 @@ span.mandatory-star {
       background-color: #680606;
       position: static !important;
       padding: 5px;
-      padding-left: 55px;
+      padding-left: 0 !important;
       margin-top: -40px !important;
       h1{
         font-size: 20px !important;
@@ -506,21 +513,53 @@ span.mandatory-star {
   }
 
 }
+@media only screen and (max-width: 767px) {
+
+  .flyer {
+    /* display: none !important; */
+    padding: 0 15px;
+    text-align: center !important;
+    margin-top: 0 !important;
+    flex-direction: column;
+    align-items: center;
+    .strip {
+      padding-bottom: 200px !important;
+      img{
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+      .text {
+        text-align: center;
+        padding: 20px 30px !important;
+        width: 100%;
+      }
+      .btn{
+        margin: 20px auto 0;
+      }
+    }
+  }
+}
 @media only screen and (max-width: 600px) {
+  .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;
+  }
   .hide-desk-show-resp{
     display: flex !important;
     }
-    nav .navbar-collapse{
-      ul{
-        border-bottom: 1px solid #aaa;
-        margin-bottom: 15px !important;
-      }
-      .help{
-        margin: 5px auto;
-        display: flex;
-        border-radius: 30px;
-      }
-    }
+    // nav .navbar-collapse{
+    //   ul{
+    //     border-bottom: 1px solid #aaa;
+    //     margin-bottom: 15px !important;
+    //   }
+    //   .help{
+    //     margin: 5px auto;
+    //     display: flex;
+    //     border-radius: 30px;
+    //   }
+    // }
   .h1 {
     font-size: 33px !important;
 }
@@ -531,6 +570,7 @@ span.mandatory-star {
   .carousel-inner {
       .carousel-caption {
           max-width: 100% !important;
+          right: 0;
           h5 {
               font-size: 20px !important;
           }
@@ -548,6 +588,7 @@ span.mandatory-star {
   &:after{
     height: 100% !important;
     width: 58px !important;
+    display: none;
   }
   img{
       display: none !important;
@@ -556,7 +597,8 @@ span.mandatory-star {
     background-color: #680606;
     position: static !important;
     padding: 5px;
-    padding-left: 55px;
+    padding-left: 0 !important;
+    margin: 0 !important;
     h1{
       font-size: 20px !important;
       margin-bottom: 0 !important;
@@ -566,9 +608,7 @@ span.mandatory-star {
     }
   }
 }
-.flyer{
-  display: none !important;
-}
+
 footer{ 
   text-align: center;
 }

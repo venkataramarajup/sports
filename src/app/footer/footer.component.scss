@@ -4,7 +4,7 @@ footer{
         border-top: 10px solid #ab0a1a;
         background-image: url(../../assets/images/imageFooter.png);
         background-repeat: no-repeat;
-        background-size: 100%;
+        background-size: 100% 100%;
         position: relative;
        
     .footer{        
@@ -100,11 +100,11 @@ footer{
     padding: 15px;
     text-align: center;
         .logos{
-           
+           display: flex;
+           max-width: 70%;
+           margin: auto;
             img{
-                max-width: 100%;
-                width: 900px;
-                margin-bottom: 10px;
+                width: 50%;
             }
         }
         p{
@@ -113,8 +113,23 @@ footer{
         }
    }
 }
+@media only screen and (max-width: 991px) {
+    footer{
+        background-size: auto 100%;
+        background-position: center right;
+    }
+}
+@media only screen and (max-width: 767px) {
+    footer{
+        .footer .socialList{
+            justify-content: center;
+        }    
+    }
+}
 @media only screen and (max-width: 600px) {
     footer{
+        // background-position: center right;
+        
         background-image: none;
         .column{
             margin-bottom:30px ;
@@ -127,6 +142,17 @@ footer{
                 justify-content: center;
             }
         }
+        .copyrights{          
+                .logos{
+                    flex-direction: column;
+                    max-width: 90% !important;
+                    margin-bottom: 15px;
+                    img{
+                        width: 100%;
+                    }
+                }
+             
+           }
     }
   
 }
