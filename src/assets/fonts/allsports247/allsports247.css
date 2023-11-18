@@ -25,6 +25,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+.icon-menu:before {
+  content: "\e918";
+}
+.icon-close2:before {
+  content: "\e912";
+}
+.icon-close3:before {
+  content: "\e917";
+}
 .icon-arrow-right-long:before {
   content: "\e90f";
 }

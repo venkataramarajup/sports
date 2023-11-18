@@ -151,6 +151,11 @@
     }
 
     @media only screen and (max-width: 991px) {
+       .banking-dropdown ul.dropdown-menu {
+            left: 0;
+            right: auto;
+        }
+        
         nav {
             flex-direction: row-reverse;
             padding: 0 !important;
@@ -162,11 +167,19 @@
             .navbar-toggler {
                 border: 0;
                 margin: 10px;
+                font-size: 28px;
                 &:focus {
                     border: 0;
                     box-shadow: none;
                 }
+                &[aria-expanded="true"] i:before{
+                    content: "\e912" !important;
+                    color:#ff0000;
+                }
             }
+            // .navbar-toggler[aria-expanded="true"] i:before {
+            //     content: "\e912" !important;
+            // }
             li{
                 a{
                     display: flex;
