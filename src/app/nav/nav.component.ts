@@ -22,6 +22,7 @@ export class NavComponent implements OnInit {
   modalReferencenononlinedepositform: NgbModalRef;
   depositSubmitform: NgbModalRef;
   payoutSubmitform: NgbModalRef;
+  isCollapsed = false;
 
   // formDialogRef: MatDialogRef<MakeADepositComponent>;
   // payformDialogRef: MatDialogRef<MakeADepositFormComponent>;
@@ -33,6 +34,15 @@ export class NavComponent implements OnInit {
     this.buildform();
     this.buildnononlineform();
     this.paymentCards = [{ name: 'Fedex / Western Union / Money Gram' }, { name: 'Crypto Currency' }]
+  }
+
+  closemodal() {
+    // document.getElementById('navbarNavDropdown').style.display = 'none'
+    if(this.isCollapsed) {
+      this.isCollapsed = false
+    } else {
+      this.isCollapsed = true
+    }
   }
 
   title: any;
