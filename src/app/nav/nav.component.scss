@@ -1,7 +1,14 @@
 :host {
     flex-wrap: wrap;
     padding: 0;
-
+   nav{
+    padding: 10px 15px !important;
+    background: #fff !important;
+    border-bottom: 1px solid #eaeaea;
+   }
+   button.btn.btn-light {
+    background-color: #fff;
+}
     .main-nav {
 
         padding: 0;
@@ -21,8 +28,8 @@
                 font-weight: 700;
 
                 .icon {
-                    width: 34px;
-                    height: 34px;
+                    width: 30px;
+                    height: 30px;
                     border: 2px solid #3F3F3F;
                     border-radius: 50%;
                     display: flex;
@@ -30,7 +37,7 @@
                     justify-content: center;
                     margin: 0 auto 1px;
                     i{
-                        font-size: 20px;
+                        font-size: 17px;
                         // font-weight: bold;
                     }
                     img {
