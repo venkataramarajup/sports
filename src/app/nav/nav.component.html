@@ -39,25 +39,25 @@
 
     <!-- <a class="navbar-brand" href="#">Navbar</a> -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        aria-controls="navbarNavDropdown" aria-label="Toggle navigation" [attr.aria-expanded]="isCollapsed" (click)="closemodal()">
         <!-- <span class="navbar-toggler-icon"></span> -->
-        <i class="icon-menu"></i>
+        <i class="icon-menu" ></i>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav main-nav">
-            <li class="nav-item">
-                <a routerLink="/Sports"><span class="icon nav-link active" aria-current="page"> <i class="icon-sports"></i> </span>Sports</a>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown" [ngClass]="isCollapsed?'show':''">
+        <ul class="navbar-nav main-nav" >
+            <li class="nav-item" (click)="closemodal()">
+                <a routerLink="/Sports"><span class="icon nav-link active" aria-current="page" > <i class="icon-sports"></i> </span>Sports</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" (click)="closemodal()">
                 <a routerLink="/Casino"><span class="icon nav-link"> <i class="icon-casino"></i></span>Casino</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" (click)="closemodal()">
                 <a routerLink="/LiveBetting"><span class="icon nav-link"><i class="icon-live-betting"></i></span>Live Betting</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" (click)="closemodal()">
                 <a routerLink="/HorseRacing"><span class="icon nav-link"> <i class="icon-horse-racing"></i></span>Horse Racing</a>
             </li>
-            <li>
+            <li (click)="closemodal()">
                 <a routerLink="/ReferAFriend"><span class="icon nav-link"><i class="icon-refer-friend"></i></span>Refer A
                     Friend</a>
             </li>
