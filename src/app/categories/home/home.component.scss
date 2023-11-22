@@ -68,20 +68,7 @@
     }
 }
 
-.curve {
-    width: 100%;
-    position: relative;
-    margin-top: -64px;
-    z-index: 9;
 
-    &:after {
-        display: none !important;
-    }
-
-    img {
-        width: 100%;
-    }
-}
 
 .promos {
     .box.h-100 {
@@ -96,7 +83,7 @@
         flex-direction: column;
         justify-content: space-between;
         // height: 100%;
-        padding-bottom: 20px;
+        padding-bottom: 15px;
         // text-align: center;
         // display: flex;
         // flex-wrap: wrap;
@@ -435,10 +422,7 @@
 }
 
 @media only screen and (max-width: 991px) {
-    .curve {
-      margin-top: -30px !important;
 
-    }
     
             .promos{
              &>.row .sports-col{
@@ -499,12 +483,7 @@
     //         }
     //     }
     // }
-    .curve {
-        margin-top: -18px !important;
-        img{
-           display: block !important;
-        }
-    }
+
 
     .promos {
         margin-top: 20px;
