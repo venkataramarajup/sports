@@ -15,9 +15,13 @@
             justify-content: center;
             max-width: 60%;
             h5{
-                font-size: 50px;
+                font-size: 35px;
                 font-weight: 700;
                 text-transform: uppercase;
+            }
+            
+            h3 {
+                font-size: 1.25rem !important; 
             }
         }
         .carousel-item{
