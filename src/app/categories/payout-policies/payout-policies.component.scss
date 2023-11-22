@@ -41,18 +41,14 @@
         }
     }
 }
-.video-banner{
+.video-banner {
     width: 100%;
+    max-height: calc(100vh - 250px);
+    overflow: hidden;
+    display: flex;
+    align-items: end;
 }
-.curve{
-    width: 100%;
-    position: relative;
-    margin-top: -65px;
-    z-index: 9;
-    img{
-        width: 100%;
-    }
-}
+
 .border-bottom{
     border-bottom: 1px solid #707070;
 }
@@ -174,15 +170,4 @@
     }
 }
 
-.curve:after{
-      display: none !important;
-      }
 
-// @media only screen and (max-width: 991px){
-// .curve {
-//     margin-top: -41px !important;
-//     &:after{
-//         display: none;
-//     }
-// }
-// }

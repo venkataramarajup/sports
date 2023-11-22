@@ -45,18 +45,7 @@
         }
     }
 }
-.curve{
-    width: 100%;
-    position: relative;
-    margin-top: -65px;
-    z-index: 9;
-    &:after{
-        display: none !important;
-    }
-    img{
-        width: 100%;
-    }
-}
+
 .gray-sec{
     background-color: #F0F0F0;
     margin-bottom: 40px;
