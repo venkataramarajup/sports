@@ -14,16 +14,16 @@
             justify-content: center;
             max-width: 60%;
             h5 {
-                font-size: 35px;
+                font-size: 30px;
                 font-weight: 700;
                 text-transform: uppercase;
             }
             h3 {
-                font-size: 1.25rem !important;
+                font-size: 1.05rem !important;
             }
         }
         .carousel-item{
-            max-height: calc(100vh - 400px);
+            max-height: calc(100vh - 450px);
             overflow: hidden;
             display: flex;
             align-items: end;
